@@ -67,7 +67,7 @@ public class PagingAndSortingHelper {
         return sortDir;
     }
 
-    public String getKeyWord(){
+    public String getKeyword(){
         return keyWord;
     }
 }

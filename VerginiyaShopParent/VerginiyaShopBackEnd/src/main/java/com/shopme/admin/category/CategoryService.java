@@ -2,7 +2,7 @@ package com.shopme.admin.category;
 
 import com.shopme.common.entity.Category;
 import com.shopme.common.exception.CategoryNotFoundException;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

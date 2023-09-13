@@ -2,7 +2,6 @@ package com.shopme.admin.brand;
 
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.Category;
-import org.hibernate.Internal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
