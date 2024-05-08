@@ -1,6 +1,5 @@
 package com.shopme.admin.setting;
 
-import com.shopme.admin.setting.state.CurrencyRepository;
 import com.shopme.common.entity.Currency;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
