@@ -1,11 +1,8 @@
 package com.shopme.admin.brand;
 
-import com.shopme.admin.AmazonS3Util;
-import com.shopme.admin.category.CategoryService;
-import com.shopme.admin.paging.PagingAndSortingHelper;
-import com.shopme.admin.paging.PagingAndSortingParam;
-import com.shopme.common.entity.Brand;
-import com.shopme.common.entity.Category;
+import java.io.IOException;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,8 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.io.IOException;
-import java.util.List;
+import com.shopme.admin.AmazonS3Util;
+import com.shopme.admin.category.CategoryService;
+import com.shopme.admin.paging.PagingAndSortingHelper;
+import com.shopme.admin.paging.PagingAndSortingParam;
+import com.shopme.common.entity.Brand;
+import com.shopme.common.entity.Category;
 
 @Controller
 public class BrandController {

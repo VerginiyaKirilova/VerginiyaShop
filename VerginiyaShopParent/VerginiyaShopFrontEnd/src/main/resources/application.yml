@@ -4,7 +4,7 @@ server:
     context-path: /Shopme
 spring:
   datasource:
-    password: password
+    password: vergito
     url: jdbc:mysql://localhost:3306/shopmedb
     username: root
       #hikari:
