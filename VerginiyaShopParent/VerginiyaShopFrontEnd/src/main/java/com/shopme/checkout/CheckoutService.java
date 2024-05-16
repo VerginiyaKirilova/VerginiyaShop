@@ -1,4 +1,5 @@
 package com.shopme.checkout;
+
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -8,9 +9,7 @@ import com.shopme.common.entity.ShippingRate;
 import com.shopme.common.entity.product.Product;
 
 @Service
-
 public class CheckoutService {
-
     private static final int DIM_DIVISOR = 139;
 
     public CheckoutInfo prepareCheckout(List<CartItem> cartItems, ShippingRate shippingRate) {
@@ -69,4 +68,3 @@ public class CheckoutService {
         return cost;
     }
 }
-

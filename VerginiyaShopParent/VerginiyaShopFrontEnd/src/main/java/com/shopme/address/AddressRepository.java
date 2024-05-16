@@ -1,13 +1,14 @@
 package com.shopme.address;
 
-import com.shopme.common.entity.Address;
-import com.shopme.common.entity.Customer;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+import com.shopme.common.entity.Address;
+import com.shopme.common.entity.Customer;
 
 public interface AddressRepository extends CrudRepository<Address, Integer>, JpaRepository<Address, Integer> {
     public List<Address> findByCustomer(Customer customer);

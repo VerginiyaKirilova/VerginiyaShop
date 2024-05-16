@@ -1,11 +1,12 @@
 package com.shopme.customer;
+
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 
-import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -26,15 +27,10 @@ import com.shopme.security.oauth.CustomerOAuth2User;
 import com.shopme.setting.EmailSettingBag;
 import com.shopme.setting.SettingService;
 
-
 @Controller
-
 public class CustomerController {
-
-    @Autowired
-    private CustomerService customerService;
-    @Autowired
-    private SettingService settingService;
+    @Autowired private CustomerService customerService;
+    @Autowired private SettingService settingService;
 
     @GetMapping("/register")
     public String showRegisterForm(Model model) {
@@ -49,7 +45,7 @@ public class CustomerController {
 
     @PostMapping("/create_customer")
     public String createCustomer(Customer customer, Model model,
-                                 HttpServletRequest request) throws UnsupportedEncodingException, MessagingException, jakarta.mail.MessagingException {
+                                 HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
         customerService.registerCustomer(customer);
         sendVerificationEmail(request, customer);
 
@@ -59,7 +55,7 @@ public class CustomerController {
     }
 
     private void sendVerificationEmail(HttpServletRequest request, Customer customer)
-            throws UnsupportedEncodingException, MessagingException, jakarta.mail.MessagingException {
+            throws UnsupportedEncodingException, MessagingException {
         EmailSettingBag emailSettings = settingService.getEmailSettings();
         JavaMailSenderImpl mailSender = Utility.prepareMailSender(emailSettings);
 
@@ -160,4 +156,3 @@ public class CustomerController {
         return userDetails;
     }
 }
-

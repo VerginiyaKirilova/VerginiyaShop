@@ -1,7 +1,7 @@
 server:
   port: 80
   servlet:
-    context-path: /Shopme
+    context-path: /VerginiyaShop
 spring:
   datasource:
     password: vergito

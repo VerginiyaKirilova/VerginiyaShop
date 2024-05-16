@@ -1,10 +1,10 @@
 package com.shopme.checkout;
+
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class CheckoutInfo {
-
     private float productCost;
     private float productTotal;
     private float shippingCostTotal;
@@ -73,4 +73,3 @@ public class CheckoutInfo {
     }
 
 }
-
