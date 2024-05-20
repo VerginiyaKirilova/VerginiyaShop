@@ -1,7 +1,7 @@
 package com.shopme.admin.user.controller;
 
 import com.shopme.admin.FileUploadUtil;
-import com.shopme.admin.security.ShopmeUserDetails;
+import com.shopme.admin.customer.security.ShopmeUserDetails;
 import com.shopme.admin.user.UserService;
 import com.shopme.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;

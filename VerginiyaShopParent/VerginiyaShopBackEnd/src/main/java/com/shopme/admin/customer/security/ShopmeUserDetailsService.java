@@ -1,4 +1,4 @@
-package com.shopme.admin.security;
+package com.shopme.admin.customer.security;
 
 import com.shopme.admin.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;

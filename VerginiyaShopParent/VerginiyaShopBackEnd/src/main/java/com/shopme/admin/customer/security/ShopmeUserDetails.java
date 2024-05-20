@@ -1,4 +1,4 @@
-package com.shopme.admin.security;
+package com.shopme.admin.customer.security;
 
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
