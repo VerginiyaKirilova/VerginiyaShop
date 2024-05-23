@@ -30,7 +30,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>software.amazon.awssdk</groupId>
