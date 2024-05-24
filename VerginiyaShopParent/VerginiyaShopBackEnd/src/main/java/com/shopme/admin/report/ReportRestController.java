@@ -21,12 +21,12 @@ public class ReportRestController {
     private OrderDetailReportService orderDetailReportService;
 
     @GetMapping("/reports/sales_by_date/{period}")
-    public List<ReportItem> getReportDataByDatePeriod(@PathVariable("period") String period){
+    public List<ReportItem> getReportDataByDatePeriod(@PathVariable("period") String period) {
         System.out.println("Report period: " + period);
 
-        switch (period){
+        switch (period) {
             case "last_7_days":
-            return masterOrderReportService.getReportDataLast7Days(ReportType.DAY);
+                return masterOrderReportService.getReportDataLast7Days(ReportType.DAY);
             case "last_28_days":
                 return masterOrderReportService.getReportDataLast28Days(ReportType.DAY);
 
@@ -48,13 +48,14 @@ public class ReportRestController {
         Date startTime = dateFormatter.parse(startDate);
         Date andTime = dateFormatter.parse(endDate);
 
-        return masterOrderReportService.getReportDataByDateRange(startTime,andTime, ReportType.DAY);
+        return masterOrderReportService.getReportDataByDateRange(startTime, andTime, ReportType.DAY);
 
     }
+
     @GetMapping("/reports/{groupBy}/{startDate}/{endDate}")
     public List<ReportItem> getReportDataByCategoryOrProductDateRange(@PathVariable("groupBy") String groupBy,
-                                   @PathVariable("startDate") String startDate,
-                                   @PathVariable("endDate") String endDate)throws ParseException{
+                                                                      @PathVariable("startDate") String startDate,
+                                                                      @PathVariable("endDate") String endDate) throws ParseException {
 
         ReportType reportType = ReportType.valueOf(groupBy.toUpperCase());
         DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");

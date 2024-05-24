@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('Shopping Cart', 'none')" />
+<head th:replace="fragments :: page_head('Shopping Cart', 'none')"/>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: header_menu"></div>
@@ -35,17 +35,20 @@
                         <form th:action="@{/place_order}" method="post">
                             <p>
 
-                                <input type="radio" name="paymentMethod" id="radioCOD" value="COD" /> Cash on Delivery (COD)
+                                <input type="radio" name="paymentMethod" id="radioCOD" value="COD"/> Cash on Delivery
+                                (COD)
                                 &nbsp;
-                                <button class="btn btn-primary d-none" type="submit" id="buttonSubmit">Place Order with COD</button>
+                                <button class="btn btn-primary d-none" type="submit" id="buttonSubmit">Place Order with
+                                    COD
+                                </button>
                             </p>
                         </form>
                     </div>
 
                     <div id="paypal-button-container"></div>
                     <form th:action="@{/process_paypal_order}" method="post" id="paypalForm">
-                        <input type="hidden" name="orderId" id="orderId" />
-                        <input type="hidden" name="paymentMethod" value="PAYPAL" />
+                        <input type="hidden" name="orderId" id="orderId"/>
+                        <input type="hidden" name="paymentMethod" value="PAYPAL"/>
                     </form>
                 </div>
             </div>
@@ -65,30 +68,41 @@
                                             [[${product.shortName}]]
                                         </a>
                                         <br/>
-                                        <small>Ship: <div th:replace="fragments :: format_currency(${item.shippingCost})"></div></small>
+                                        <small>Ship:
+                                            <div th:replace="fragments :: format_currency(${item.shippingCost})"></div>
+                                        </small>
                                     </td>
                                     <td>
                                         <div th:replace="fragments :: format_currency(${item.subtotal})">
                                     </td>
                                 </tr>
                             </th:block>
-                            <tr><td colspan="3"><hr/></tr>
+                            <tr>
+                                <td colspan="3">
+                                    <hr/>
+                            </tr>
                         </table>
                     </div>
 
                     <div class="row mt-2">
-                        <div class="col">Product Total: </div>
-                        <div class="col"><div th:replace="fragments :: format_currency(${checkoutInfo.productTotal})"></div></div>
+                        <div class="col">Product Total:</div>
+                        <div class="col">
+                            <div th:replace="fragments :: format_currency(${checkoutInfo.productTotal})"></div>
+                        </div>
                     </div>
 
                     <div class="row mt-2">
-                        <div class="col">Shipping Total: </div>
-                        <div class="col"><div th:replace="fragments :: format_currency(${checkoutInfo.shippingCostTotal})"></div></div>
+                        <div class="col">Shipping Total:</div>
+                        <div class="col">
+                            <div th:replace="fragments :: format_currency(${checkoutInfo.shippingCostTotal})"></div>
+                        </div>
                     </div>
 
                     <div class="row mt-2">
-                        <div class="col">Payment Total: </div>
-                        <div class="col"><b><div th:replace="fragments :: format_currency(${checkoutInfo.paymentTotal})"></div></b></div>
+                        <div class="col">Payment Total:</div>
+                        <div class="col"><b>
+                            <div th:replace="fragments :: format_currency(${checkoutInfo.paymentTotal})"></div>
+                        </b></div>
                     </div>
                 </div>
             </div>
@@ -180,6 +194,7 @@
 			showErrorModal("Something wrong with your address information, so payment will not work.");
 		}
 	}).render("#paypal-button-container");
+
 
 </script>
 </body>

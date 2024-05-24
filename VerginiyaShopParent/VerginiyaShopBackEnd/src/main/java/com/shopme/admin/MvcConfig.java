@@ -33,10 +33,10 @@ public class MvcConfig implements WebMvcConfigurer {
 //			.addResourceLocations("file:/" + absolutePath + "/");
 //	}
 
-        @Override
-        public void addArgumentResolvers(List< HandlerMethodArgumentResolver > resolvers) {
-            resolvers.add(new PagingAndSortingArgumentResolver());
-        }
-
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+        resolvers.add(new PagingAndSortingArgumentResolver());
     }
+
+}
 

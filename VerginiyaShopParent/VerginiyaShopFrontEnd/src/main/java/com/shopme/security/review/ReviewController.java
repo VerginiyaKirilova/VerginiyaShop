@@ -1,9 +1,10 @@
-package com.shopme.review;
+package com.shopme.security.review;
 
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.shopme.security.review.vote.ReviewVoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,6 @@ import com.shopme.common.entity.product.Product;
 import com.shopme.common.exception.ProductNotFoundException;
 import com.shopme.common.exception.ReviewNotFoundException;
 import com.shopme.product.ProductService;
-import com.shopme.review.vote.ReviewVoteService;
 
 @Controller
 public class ReviewController {

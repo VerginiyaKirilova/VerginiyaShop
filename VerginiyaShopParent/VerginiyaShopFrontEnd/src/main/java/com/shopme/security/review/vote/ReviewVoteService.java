@@ -1,4 +1,4 @@
-package com.shopme.review.vote;
+package com.shopme.security.review.vote;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.shopme.common.entity.Customer;
 import com.shopme.common.entity.Review;
 import com.shopme.common.entity.ReviewVote;
-import com.shopme.review.ReviewRepository;
+import com.shopme.security.review.ReviewRepository;
 
 @Service
 @Transactional

@@ -17,6 +17,7 @@ public class OrderRestController {
         return new Response(orderId, status);
     }
 }
+
 class Response {
     private Integer orderId;
     private String status;
@@ -25,6 +26,7 @@ class Response {
         this.orderId = orderId;
         this.status = status;
     }
+
     public Integer getOrderId() {
         return orderId;
     }

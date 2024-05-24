@@ -6,11 +6,11 @@
 
     <title>[[${title}]] - [[${SITE_NAME}]]</title>
 
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
-    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}" ></script>
-    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" ></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+    <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
         [[${columnLabel}]]
     </a>
     <span th:if="${sortField == fieldName}"
-          th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}" ></span>
+          th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
 </th>
 
 <a th:fragment="page_link(moduleURL, pageNum, label)"
@@ -115,8 +115,8 @@
 
 <div th:fragment="search_form()" th:remove="tag">
     <form th:action="@{${moduleURL} + '/page/1'}" class="form-inline m-3">
-        <input type="hidden" name="sortField" th:value="${sortField}" />
-        <input type="hidden" name="sortDir" th:value="${sortDir}" />
+        <input type="hidden" name="sortField" th:value="${sortField}"/>
+        <input type="hidden" name="sortDir" th:value="${sortDir}"/>
 
         Filter:&nbsp;
         <input type="search" name="keyword" th:value="${keyword}" class="form-control" required/>

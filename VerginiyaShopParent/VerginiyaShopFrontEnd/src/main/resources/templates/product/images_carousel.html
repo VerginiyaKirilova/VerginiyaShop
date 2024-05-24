@@ -15,12 +15,12 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img th:src="@{${product.mainImagePath}}" class="img-fluid" />
+                        <img th:src="@{${product.mainImagePath}}" class="img-fluid"/>
                     </div>
 
                     <th:block th:each="extraImage : ${product.images}">
                         <div class="carousel-item">
-                            <img th:src="@{${extraImage.imagePath}}" class="img-fluid" />
+                            <img th:src="@{${extraImage.imagePath}}" class="img-fluid"/>
                         </div>
                     </th:block>
 

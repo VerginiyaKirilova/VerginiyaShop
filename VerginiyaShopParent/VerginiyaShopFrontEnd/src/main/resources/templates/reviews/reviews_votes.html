@@ -5,7 +5,8 @@
     <div class="col">
         <th:block th:each="review : ${listReviews}">
             <div class="row">
-                <div class="col-xs"><input type="text" class="product-detail-rating-star" dir="ltr" data-size="xs" th:value="${review.rating}" /></div>
+                <div class="col-xs"><input type="text" class="product-detail-rating-star" dir="ltr" data-size="xs"
+                                           th:value="${review.rating}"/></div>
 
                 <div class="col-xs ml-2">
                     <a class="linkVoteReview fa-thumbs-up"
@@ -35,10 +36,16 @@
             </div>
 
             <div class="row">
-                <div class="col ml-3"><small>[[${review.customer.fullName}]], <div th:replace="fragments :: format_time(${review.reviewTime})"></div></small></div>
+                <div class="col ml-3"><small>[[${review.customer.fullName}]],
+                    <div th:replace="fragments :: format_time(${review.reviewTime})"></div>
+                </small></div>
             </div>
 
-            <div class="row"><div class="col"><hr/></div></div>
+            <div class="row">
+                <div class="col">
+                    <hr/>
+                </div>
+            </div>
         </th:block>
     </div>
 </div>

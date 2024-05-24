@@ -19,8 +19,8 @@ import com.shopme.common.entity.Review;
 import com.shopme.common.entity.product.Product;
 import com.shopme.common.exception.CategoryNotFoundException;
 import com.shopme.common.exception.ProductNotFoundException;
-import com.shopme.review.ReviewService;
-import com.shopme.review.vote.ReviewVoteService;
+import com.shopme.security.review.ReviewService;
+import com.shopme.security.review.vote.ReviewVoteService;
 
 @Controller
 public class ProductController {

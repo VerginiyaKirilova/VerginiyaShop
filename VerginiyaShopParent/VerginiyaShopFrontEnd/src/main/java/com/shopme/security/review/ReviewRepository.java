@@ -1,4 +1,4 @@
-package com.shopme.review;
+package com.shopme.security.review;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

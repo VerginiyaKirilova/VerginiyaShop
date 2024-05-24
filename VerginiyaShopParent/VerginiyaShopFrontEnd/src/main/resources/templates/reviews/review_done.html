@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <head th:replace="fragments :: page_head('Write Product Review', 'tag')" />
-    <link th:href="@{/star-rating/css/star-rating.css}" media="all" rel="stylesheet" type="text/css" />
+    <link th:href="@{/star-rating/css/star-rating.css}" media="all" rel="stylesheet" type="text/css"/>
     <script th:src="@{/star-rating/js/star-rating.js}" type="text/javascript"></script>
-    <link th:href="@{/star-rating/themes/krajee-svg/theme.css}" media="all" rel="stylesheet" type="text/css" />
+    <link th:href="@{/star-rating/themes/krajee-svg/theme.css}" media="all" rel="stylesheet" type="text/css"/>
     <script th:src="@{/star-rating/themes/krajee-svg/theme.js}"></script>
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div><h2>Write Product Review</h2></div>
 
     <div>
-        <img th:src="@{${review.product.mainImagePath}}" style="height: 200px" />
+        <img th:src="@{${review.product.mainImagePath}}" style="height: 200px"/>
     </div>
 
     <div>
@@ -28,10 +28,10 @@
 
     <div class="border border-secondary rounded p-3">
         <p>
-            <input type="text" th:value="${review.rating}" class="product-rating-star" dir="ltr" data-size="md" />
+            <input type="text" th:value="${review.rating}" class="product-rating-star" dir="ltr" data-size="md"/>
         </p>
         <p>
-            <input type="text" th:value="${review.headline}" class="form-control" readonly="readonly" />
+            <input type="text" th:value="${review.headline}" class="form-control" readonly="readonly"/>
         </p>
         <p>
             <textarea rows="3" cols="10" class="form-control" readonly="readonly">[[${review.comment}]]</textarea>

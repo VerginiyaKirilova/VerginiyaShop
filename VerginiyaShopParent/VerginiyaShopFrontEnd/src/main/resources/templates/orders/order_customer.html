@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('My Orders', 'none')" />
+<head th:replace="fragments :: page_head('My Orders', 'none')"/>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: header_menu"></div>
@@ -15,18 +15,20 @@
         <table class="table table-bordered table-striped table-hover table-responsive-xl">
             <thead class="thead-dark">
             <tr>
-                <th th:replace="fragments :: column_link('id', 'ID', 'none')" />
-                <th th:replace="fragments :: column_link('orderTime', 'Order Time', 'none')" />
+                <th th:replace="fragments :: column_link('id', 'ID', 'none')"/>
+                <th th:replace="fragments :: column_link('orderTime', 'Order Time', 'none')"/>
                 <th>Products</th>
-                <th th:replace="fragments :: column_link('total', 'Total', 'none')" />
-                <th th:replace="fragments :: column_link('status', 'Status', 'none')" />
+                <th th:replace="fragments :: column_link('total', 'Total', 'none')"/>
+                <th th:replace="fragments :: column_link('status', 'Status', 'none')"/>
                 <th></th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="order : ${listOrders}">
                 <td th:text="${order.id}">ID</td>
-                <td><div th:replace="fragments :: format_time(${order.orderTime})">Order Time</div></td>
+                <td>
+                    <div th:replace="fragments :: format_time(${order.orderTime})">Order Time</div>
+                </td>
                 <td th:utext="${order.productNames}"></td>
                 <td>
                     <div th:replace="fragments :: format_currency(${order.total})">Total</div>
@@ -37,7 +39,8 @@
                        th:href="@{'/orders/detail/' + ${order.id}}"
                        title="View details of this order"></a>
 
-                    <th:block th:if="${order.returnRequested == false && order.delivered == true && order.returned == false}">
+                    <th:block
+                            th:if="${order.returnRequested == false && order.delivered == true && order.returned == false}">
                         &nbsp;&nbsp;&nbsp;
                         <a class="fas fa-undo fa-2x icon-dark linkReturnOrder" href=""
                            th:classappend="'linkReturn' + ${order.id}"
@@ -64,7 +67,8 @@
                                     <a class="fas fa-file-alt fa-2x icon-green linkDetail"
                                        th:href="@{'/orders/detail/' + ${order.id}}"></a>
 
-                                    <th:block th:if="${order.returnRequested == false && order.delivered == true && order.returned == false}">
+                                    <th:block
+                                            th:if="${order.returnRequested == false && order.delivered == true && order.returned == false}">
                                         &nbsp;
                                         <a class="fas fa-undo fa-2x icon-dark linkReturnOrder" href=""
                                            th:classappend="'linkReturn' + ${order.id}"
@@ -87,7 +91,9 @@
                                 <span th:class="'textOrderStatus' + ${order.id}">[[${order.status}]]</span>
                             </div>
                         </div>
-                        <div><small><div th:replace="fragments :: format_time(${order.orderTime})"></div></small></div>
+                        <div><small>
+                            <div th:replace="fragments :: format_time(${order.orderTime})"></div>
+                        </small></div>
                     </div>
                 </div>
             </div>
@@ -119,6 +125,7 @@
 	$(document).ready(function(){
 		handleDetailLink(".linkDetail", "#orderDetailsModal");
 	});
+
 </script>
 <script type="text/javascript" th:src="@{/js/return_order.js}"></script>
 </body>

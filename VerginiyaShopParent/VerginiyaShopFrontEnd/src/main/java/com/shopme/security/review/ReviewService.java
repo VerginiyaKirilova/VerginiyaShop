@@ -1,4 +1,4 @@
-package com.shopme.review;
+package com.shopme.security.review;
 
 import java.util.Date;
 

@@ -35,17 +35,26 @@ import com.shopme.setting.PaymentSettingBag;
 import com.shopme.setting.SettingService;
 import com.shopme.shipping.ShippingRateService;
 import com.shopme.shoppingcart.ShoppingCartService;
+
 @Controller
 public class CheckoutController {
 
-    @Autowired private CheckoutService checkoutService;
-    @Autowired private ControllerHelper controllerHelper;
-    @Autowired private AddressService addressService;
-    @Autowired private ShippingRateService shipService;
-    @Autowired private ShoppingCartService cartService;
-    @Autowired private OrderService orderService;
-    @Autowired private SettingService settingService;
-    @Autowired private PayPalService paypalService;
+    @Autowired
+    private CheckoutService checkoutService;
+    @Autowired
+    private ControllerHelper controllerHelper;
+    @Autowired
+    private AddressService addressService;
+    @Autowired
+    private ShippingRateService shipService;
+    @Autowired
+    private ShoppingCartService cartService;
+    @Autowired
+    private OrderService orderService;
+    @Autowired
+    private SettingService settingService;
+    @Autowired
+    private PayPalService paypalService;
 
     @GetMapping("/checkout")
     public String showCheckoutPage(Model model, HttpServletRequest request) {
@@ -128,7 +137,7 @@ public class CheckoutController {
         helper.setTo(toAddress);
         helper.setSubject(subject);
 
-        DateFormat dateFormatter =  new SimpleDateFormat("HH:mm:ss E, dd MMM yyyy");
+        DateFormat dateFormatter = new SimpleDateFormat("HH:mm:ss E, dd MMM yyyy");
         String orderTime = dateFormatter.format(order.getOrderTime());
 
         CurrencySettingBag currencySettings = settingService.getCurrencySettings();

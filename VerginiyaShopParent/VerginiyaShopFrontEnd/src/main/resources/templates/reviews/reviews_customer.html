@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('My Reviews', 'none')" />
+<head th:replace="fragments :: page_head('My Reviews', 'none')"/>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: header_menu"></div>
@@ -15,11 +15,11 @@
         <table class="table table-bordered table-striped table-hover table-responsive-xl">
             <thead class="thead-dark">
             <tr>
-                <th th:replace="fragments :: column_link('id', 'ID', 'none')" />
-                <th th:replace="fragments :: column_link('product', 'Product', 'none')" />
-                <th th:replace="fragments :: column_link('headline', 'Headline', 'none')" />
-                <th th:replace="fragments :: column_link('rating', 'Rating', 'none')" />
-                <th th:replace="fragments :: column_link('reviewTime', 'Review Time', 'none')" />
+                <th th:replace="fragments :: column_link('id', 'ID', 'none')"/>
+                <th th:replace="fragments :: column_link('product', 'Product', 'none')"/>
+                <th th:replace="fragments :: column_link('headline', 'Headline', 'none')"/>
+                <th th:replace="fragments :: column_link('rating', 'Rating', 'none')"/>
+                <th th:replace="fragments :: column_link('reviewTime', 'Review Time', 'none')"/>
                 <th></th>
             </tr>
             </thead>
@@ -87,6 +87,7 @@
 	$(document).ready(function() {
 		handleDetailLink(".link-detail-review", "#reviewDetailModal");
 	});
+
 </script>
 </body>
 </html>
