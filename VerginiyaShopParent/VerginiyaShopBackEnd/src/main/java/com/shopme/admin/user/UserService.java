@@ -29,9 +29,11 @@ public class UserService {
     public User getByEmail(String email) {
         return userRepo.getUserByEmail(email);
     }
+
     public List<User> listAll() {
         return (List<User>) userRepo.findAll(Sort.by("firstName").ascending());
     }
+
     public void listByPage(int pageNum, PagingAndSortingHelper helper) {
         helper.listEntities(pageNum, USERS_PER_PAGE, userRepo);
     }
@@ -58,6 +60,7 @@ public class UserService {
 
         return userRepo.save(user);
     }
+
     public User updateAccount(User userInForm){
         User userInDB = userRepo.findById(userInForm.getId()).get();
 
@@ -73,10 +76,12 @@ public class UserService {
 
         return userRepo.save(userInDB);
     }
+
     private void encodePassword(User user){
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
     }
+
     public boolean isEmailUnique(Integer id, String email){
         User userByEmail = userRepo.getUserByEmail(email);
         if(userByEmail == null) return true;

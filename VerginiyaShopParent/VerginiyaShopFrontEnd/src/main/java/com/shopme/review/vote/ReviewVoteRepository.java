@@ -1,4 +1,4 @@
-package com.shopme.security.review.vote;
+package com.shopme.review.vote;
 
 import java.util.List;
 

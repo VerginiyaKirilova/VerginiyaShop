@@ -1,5 +1,6 @@
-package com.shopme.admin.customer.security;
+package com.shopme.admin.security;
 
+import com.shopme.admin.security.ShopmeUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

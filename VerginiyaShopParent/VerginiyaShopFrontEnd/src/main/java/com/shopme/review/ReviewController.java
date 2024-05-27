@@ -1,10 +1,10 @@
-package com.shopme.security.review;
+package com.shopme.review;
 
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.shopme.security.review.vote.ReviewVoteService;
+import com.shopme.review.vote.ReviewVoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;

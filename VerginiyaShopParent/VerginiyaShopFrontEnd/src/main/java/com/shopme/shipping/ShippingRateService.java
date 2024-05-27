@@ -4,7 +4,9 @@ import com.shopme.common.entity.Address;
 import com.shopme.common.entity.Customer;
 import com.shopme.common.entity.ShippingRate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ShippingRateService {
     @Autowired
     private ShippingRateRepository repo;

@@ -1,9 +1,10 @@
-package com.shopme.security.review;
+package com.shopme.review;
 
 import java.util.Date;
 
 import javax.transaction.Transactional;
 
+import com.shopme.review.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

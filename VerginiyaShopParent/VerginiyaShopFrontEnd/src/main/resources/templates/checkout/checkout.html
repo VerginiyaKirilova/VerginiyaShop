@@ -73,7 +73,7 @@
                                         </small>
                                     </td>
                                     <td>
-                                        <div th:replace="fragments :: format_currency(${item.subtotal})">
+                                        <div th:replace="fragments :: format_currency(${item.subtotal})"></div>
                                     </td>
                                 </tr>
                             </th:block>
@@ -194,6 +194,7 @@
 			showErrorModal("Something wrong with your address information, so payment will not work.");
 		}
 	}).render("#paypal-button-container");
+
 
 
 </script>

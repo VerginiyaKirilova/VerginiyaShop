@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <head th:replace="fragments :: page_head('Write Product Review', 'tag')" />
+    <head th:replace="fragments :: page_head('Write Product Review', 'tag')"/>
     <link th:href="@{/star-rating/css/star-rating.css}" media="all" rel="stylesheet" type="text/css"/>
     <script th:src="@{/star-rating/js/star-rating.js}" type="text/javascript"></script>
     <link th:href="@{/star-rating/themes/krajee-svg/theme.css}" media="all" rel="stylesheet" type="text/css"/>
@@ -50,6 +50,8 @@
 		showCaption: false,
 		theme: 'krajee-svg'
 	});
+
+
 </script>
 </body>
 </html>
