@@ -10,11 +10,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+import com.shopme.common.constants.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import com.shopme.common.Constants;
 import com.shopme.common.entity.setting.Setting;
 
 @Component

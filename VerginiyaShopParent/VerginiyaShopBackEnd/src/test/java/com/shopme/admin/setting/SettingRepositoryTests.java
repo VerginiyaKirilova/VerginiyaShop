@@ -1,5 +1,6 @@
 package com.shopme.admin.setting;
 
+import com.shopme.admin.repository.SettingRepository;
 import com.shopme.common.entity.setting.Setting;
 import com.shopme.common.entity.setting.SettingCategory;
 import org.junit.jupiter.api.Test;

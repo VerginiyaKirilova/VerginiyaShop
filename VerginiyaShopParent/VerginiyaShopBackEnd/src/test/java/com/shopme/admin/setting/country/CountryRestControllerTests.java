@@ -2,6 +2,7 @@ package com.shopme.admin.setting.country;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.shopme.admin.repository.CountryRepository;
 import com.shopme.common.entity.Country;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,8 @@ public class CountryRestControllerTests {
 	
 	@Autowired ObjectMapper objectMapper;
 	
-	@Autowired CountryRepository repo;
+	@Autowired
+    CountryRepository repo;
 	
 	@Test
 	@WithMockUser(username = "nam@codejava.net", password = "something", roles = "ADMIN")

@@ -1,5 +1,6 @@
 package com.shopme.admin;
 
+import com.shopme.admin.util.AmazonS3Util;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;

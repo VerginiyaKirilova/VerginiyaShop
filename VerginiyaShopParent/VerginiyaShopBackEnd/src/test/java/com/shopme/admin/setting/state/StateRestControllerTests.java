@@ -1,7 +1,8 @@
 package com.shopme.admin.setting.state;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shopme.admin.setting.country.CountryRepository;
+import com.shopme.admin.repository.CountryRepository;
+import com.shopme.admin.repository.StateRepository;
 import com.shopme.common.entity.Country;
 import com.shopme.common.entity.State;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,8 @@ public class StateRestControllerTests {
 	
 	@Autowired CountryRepository countryRepo;
 	
-	@Autowired StateRepository stateRepo;
+	@Autowired
+    StateRepository stateRepo;
 	
 	@Test
 	@WithMockUser(username = "nam", password = "something", roles = "Admin")

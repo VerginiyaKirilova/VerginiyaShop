@@ -1,5 +1,7 @@
 package com.shopme.admin.category;
 
+import com.shopme.admin.repository.CategoryRepository;
+import com.shopme.admin.service.CategoryService;
 import com.shopme.common.entity.Category;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

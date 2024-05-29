@@ -1,21 +1,30 @@
 package com.shopme.common.entity;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import com.shopme.common.Constants;
+import com.shopme.common.constants.Constants;
+
+import javax.persistence.JoinColumn;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "brands")
-public class Brand extends IdBasedEntity {
+@NoArgsConstructor
+@Getter
+@Setter
+public class Brand extends IdBasedEntity implements Serializable{
 
     @Column(nullable = false, length = 45, unique = true)
     private String name;
@@ -31,10 +40,6 @@ public class Brand extends IdBasedEntity {
     )
     private Set<Category> categories = new HashSet<>();
 
-    public Brand() {
-
-    }
-
     public Brand(String name) {
         this.name = name;
         this.logo = "brand-logo.png";
@@ -45,28 +50,8 @@ public class Brand extends IdBasedEntity {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    public Set<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
+    public Brand(Integer id) {
+        this.id = id;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.shopme.admin.order;
 
+import com.shopme.admin.repository.OrderDetailRepository;
 import com.shopme.common.entity.order.OrderDetail;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

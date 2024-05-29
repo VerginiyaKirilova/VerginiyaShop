@@ -1,16 +1,29 @@
 package com.shopme.common.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 @Entity
 @Table(name = "customers")
-public class Customer extends AbstractAddressWithCountry {
+@NoArgsConstructor
+@Getter
+@Setter
+public class Customer extends AbstractAddressWithCountry implements Serializable{
 
     @Column(nullable = false, unique = true, length = 45)
     private String email;
@@ -33,71 +46,33 @@ public class Customer extends AbstractAddressWithCountry {
     @Column(name = "reset_password_token", length = 30)
     private String resetPasswordToken;
 
-    public Customer() {
-    }
-
     public Customer(Integer id) {
         this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getVerificationCode() {
-        return verificationCode;
-    }
-
-    public void setVerificationCode(String verificationCode) {
-        this.verificationCode = verificationCode;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
     }
 
     public String getFullName() {
         return firstName + " " + lastName;
     }
 
-    public AuthenticationType getAuthenticationType() {
-        return authenticationType;
-    }
+    @Transient
+    public String getAddress() {
+        String address = firstName;
 
-    public void setAuthenticationType(AuthenticationType authenticationType) {
-        this.authenticationType = authenticationType;
-    }
+        if (lastName != null && !lastName.isEmpty()) address += " " + lastName;
 
-    public String getResetPasswordToken() {
-        return resetPasswordToken;
-    }
+        if (!addressLine1.isEmpty()) address += ", " + addressLine1;
 
-    public void setResetPasswordToken(String resetPasswordToken) {
-        this.resetPasswordToken = resetPasswordToken;
-    }
+        if (addressLine2 != null && !addressLine2.isEmpty()) address += ", " + addressLine2;
 
+        if (!city.isEmpty()) address += ", " + city;
+
+        if (state != null && !state.isEmpty()) address += ", " + state;
+
+        address += ", " + country.getName();
+
+        if (!postalCode.isEmpty()) address += ". Postal Code: " + postalCode;
+        if (!phoneNumber.isEmpty()) address += ". Phone Number: " + phoneNumber;
+
+        return address;
+    }
 }

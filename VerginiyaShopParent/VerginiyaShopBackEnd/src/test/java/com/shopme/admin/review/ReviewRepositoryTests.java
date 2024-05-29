@@ -1,5 +1,6 @@
 package com.shopme.admin.review;
 
+import com.shopme.admin.repository.ReviewRepository;
 import com.shopme.common.entity.Customer;
 import com.shopme.common.entity.Review;
 import com.shopme.common.entity.product.Product;

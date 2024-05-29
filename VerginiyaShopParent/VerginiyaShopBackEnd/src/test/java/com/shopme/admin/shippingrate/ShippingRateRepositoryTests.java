@@ -1,5 +1,6 @@
 package com.shopme.admin.shippingrate;
 
+import com.shopme.admin.repository.ShippingRateRepository;
 import com.shopme.common.entity.Country;
 import com.shopme.common.entity.ShippingRate;
 import org.junit.jupiter.api.Test;
