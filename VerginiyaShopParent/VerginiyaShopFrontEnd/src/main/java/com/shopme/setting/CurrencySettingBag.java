@@ -1,4 +1,5 @@
 package com.shopme.setting;
+
 import java.util.List;
 
 import com.shopme.common.entity.setting.Setting;
@@ -30,4 +31,3 @@ public class CurrencySettingBag extends SettingBag {
         return Integer.parseInt(super.getValue("DECIMAL_DIGITS"));
     }
 }
-

@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class CheckoutInfo {
+
     private float productCost;
     private float productTotal;
     private float shippingCostTotal;
@@ -71,5 +72,4 @@ public class CheckoutInfo {
         DecimalFormat formatter = new DecimalFormat("##.##");
         return formatter.format(paymentTotal);
     }
-
 }

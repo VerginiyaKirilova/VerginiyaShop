@@ -2,60 +2,40 @@ package com.shopme.common.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "currencies")
-public class Currency extends IdBasedEntity {
-	
-	@Column(nullable = false, length = 64)
-	private String name;
-	
-	@Column(nullable = false, length = 3)
-	private String symbol;
-	
-	@Column(nullable = false, length = 4)
-	private String code;
+@NoArgsConstructor
+@Getter
+@Setter
+public class Currency extends IdBasedEntity{
 
-	public Currency() {
-		
-	}
-	
-	public Currency(String name, String symbol, String code) {
-		super();
-		this.name = name;
-		this.symbol = symbol;
-		this.code = code;
-	}
+    @Column(nullable = false, length = 64)
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    @Column(nullable = false, length = 3)
+    private String symbol;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    @Column(nullable = false, length = 4)
+    private String code;
 
-	public String getSymbol() {
-		return symbol;
-	}
+    public Currency(String name, String symbol, String code) {
+        super();
+        this.name = name;
+        this.symbol = symbol;
+        this.code = code;
+    }
 
-	public void setSymbol(String symbol) {
-		this.symbol = symbol;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	@Override
-	public String toString() {
-		return name + " - " + code + " - " + symbol;
-	}
-
-	
+    @Override
+    public String toString() {
+        return name + " - " + code + " - " + symbol;
+    }
 }

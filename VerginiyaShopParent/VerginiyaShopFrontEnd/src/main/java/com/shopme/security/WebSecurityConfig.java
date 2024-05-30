@@ -20,9 +20,18 @@ import com.shopme.security.oauth.OAuth2LoginSuccessHandler;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired private CustomerOAuth2UserService oAuth2UserService;
-    @Autowired private OAuth2LoginSuccessHandler oauth2LoginHandler;
-    @Autowired private DatabaseLoginSuccessHandler databaseLoginHandler;
+    private CustomerOAuth2UserService oAuth2UserService;
+    private OAuth2LoginSuccessHandler oauth2LoginHandler;
+    private DatabaseLoginSuccessHandler databaseLoginHandler;
+
+    @Autowired
+    public WebSecurityConfig(CustomerOAuth2UserService oAuth2UserService, OAuth2LoginSuccessHandler oauth2LoginHandler,
+                             DatabaseLoginSuccessHandler databaseLoginHandler) {
+        super();
+        this.oAuth2UserService = oAuth2UserService;
+        this.oauth2LoginHandler = oauth2LoginHandler;
+        this.databaseLoginHandler = databaseLoginHandler;
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -33,8 +42,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/account_details", "/update_account_details", "/orders/**",
-                        "/cart", "/address_book/**", "/checkout", "/place_order", "/reviews/**",
-                        "/process_paypal_order", "/write_review/**", "/post_review").authenticated()
+                        "/cart" , "/address_book/**", "/reviews/**",
+                        "/checkout", "/place_order", "/process_paypal_order",
+                        "/write_review/**", "/post_review", "/customer/questions/**",
+                        "/post_question/**", "/ask_question/**")
+                .authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
@@ -63,7 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
+        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**","/css/**");
     }
 
     @Bean
@@ -80,4 +92,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         return authProvider;
     }
+
 }
