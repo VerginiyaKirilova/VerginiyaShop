@@ -4,46 +4,52 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
 
-    <title>Login - Verginiyashop Admin</title>
+    <title>[[#{login.message}]]</title>
 
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 <body>
+
 <div class="container-fluid text-center">
 
     <div>
-        <img th:src="@{/images/VerginiyashopAdminBig.png}" class="img-fluid"/>
+        <img th:src="@{/images/VerginiyashopAdminBig.png}"/>
     </div>
 
     <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto">
+
         <div th:if="${param.error}">
             <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
         </div>
+
         <div th:if="${param.logout}">
-            <p class="text-warning">You have been logged out.</p>
+            <p class="text-warning">[[#{logout.message}]]</p>
         </div>
 
+
         <div class="border border-secondary rounded p-3">
-            <p>Access to Verginiyashop Control Panel</p>
+            <p>[[#{login.logintitle}]]</p>
             <p>
-                <input type="email" name="email" class="form-control" placeholder="E-mail" required/>
+                <input type="email" name="email" class="form-control" th:placeholder="#{email.placeholder}" required/>
             </p>
             <p>
-                <input type="password" name="password" class="form-control" placeholder="Password" required/>
+                <input type="password" name="password" class="form-control" th:placeholder="#{password.placeholder}"
+                       required/>
             </p>
             <p>
-                <input type="checkbox" name="remember-me"/>&nbsp;Remember Me
+                <input type="checkbox" name="remember-me"/>&nbsp;[[#{login.remembermessage}]]
             </p>
             <p>
-                <input type="submit" value="Login" class="btn btn-primary"/>
+                <input type="submit" th:value="#{login.button}" class="btn btn-primary"/>
             </p>
         </div>
     </form>
 
     <div>
-        <p>Verginiyashop Control Panel - Copyright &copy; Verginiyashop</p>
+        <p>[[#{login.copyright.front}]] &copy; [[#{login.copyright.end}]]</p>
     </div>
 
 </div>
+
 </body>
 </html>

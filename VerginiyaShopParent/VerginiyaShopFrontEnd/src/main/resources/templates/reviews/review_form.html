@@ -30,6 +30,7 @@
         </div>
     </div>
 
+    <!-- /post_review -->
     <form th:if="${customerCanReview}" th:action="@{/post_review}"
           method="post" th:object="${review}" style="max-width: 600px; margin: 0 auto">
         <input type="hidden" name="productId" th:value="${product.id}"/>

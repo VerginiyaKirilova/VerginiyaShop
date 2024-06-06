@@ -4,7 +4,8 @@ var fieldState;
 
 $(document).ready(function() {
 	dropDownCountry = $("#country");
-	dataListState = $("#listStates");
+	// dataListState =  $("#listStates"); // 1.Option Dependent Dropdown $("#listStates")
+	dataListState =  $("#stateList"); // 2.Option Dependent Dropdown $("#stateList")
 	fieldState = $("#state");
 
 	dropDownCountry.on("change", function() {

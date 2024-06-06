@@ -35,14 +35,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/users/**", "/settings/**", "/countries/**", "/states/**").hasAuthority("Admin")
-                .antMatchers("/categories/**","/brands/**","/menus/**", "/articles/**").hasAnyAuthority("Admin", "Editor")
+                .antMatchers("/categories/**", "/brands/**", "/menus/**", "/articles/**").hasAnyAuthority("Admin", "Editor")
                 .antMatchers("/products/new", "/products/delete/**").hasAnyAuthority("Admin", "Editor")
                 .antMatchers("/products/edit/**", "/products/save", "/products/check_unique")
                 .hasAnyAuthority("Admin", "Editor", "Salesperson")
                 .antMatchers("/products", "/products/", "/products/detail/**", "/products/page/**")
                 .hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
-                .antMatchers("/products/**","/articles/**", "/menus/**", "/sections/**").hasAnyAuthority("Admin", "Editor")
-                .antMatchers("/customers/**","/shipping/**","/articles/**", "/get_shipping_cost", "/reports/**").hasAnyAuthority("Admin", "Salesperson")
+                .antMatchers("/products/**", "/articles/**", "/menus/**", "/sections/**").hasAnyAuthority("Admin", "Editor")
+                .antMatchers("/customers/**", "/shipping/**", "/articles/**", "/get_shipping_cost", "/reports/**").hasAnyAuthority("Admin", "Salesperson")
                 .antMatchers("/orders", "/orders/", "/orders/page/**", "/orders/detail/**").hasAnyAuthority("Admin", "Salesperson", "Shipper")
                 .antMatchers("/states/list_by_country/**").hasAnyAuthority("Admin", "Salesperson")
                 .antMatchers("/orders_shipper/update/**").hasAuthority("Shipper")
@@ -71,7 +71,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     // Like -> showing image in /login , all images,js and web jars files are detected
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**" , "/css/**");
+        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**", "/css/**");
     }
 
     public DaoAuthenticationProvider authenticationProvider() {

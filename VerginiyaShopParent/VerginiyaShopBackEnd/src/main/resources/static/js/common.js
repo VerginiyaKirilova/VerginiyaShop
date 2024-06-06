@@ -8,6 +8,7 @@ $(document).ready(function() {
 	customizeTabs();
 });
 
+
 function customizeDropDownMenu() {
 	$(".navbar .dropdown").hover(
 		function() {
@@ -17,7 +18,7 @@ function customizeDropDownMenu() {
 			$(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
 		}
 	);
-	
+
 	$(".dropdown > a").click(function() {
 		location.href = this.href;
 	});

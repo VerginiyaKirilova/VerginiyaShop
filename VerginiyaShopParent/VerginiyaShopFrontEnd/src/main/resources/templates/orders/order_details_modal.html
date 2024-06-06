@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <div class="modal-header">
     <h4 class="modal-title">Order Details</h4>
@@ -120,7 +121,9 @@
                         <div th:if="${product.reviewedByCustomer}">
                             <a target="_blank" th:href="@{'/reviews/page/1?sortField=reviewTime&sortDir=desc&keyword=' + ${#strings.substring(product.shortName, 0, 20)}}" class="btn btn-warning">See your Review</a>
                         </div>
+
                     </div>
+
                 </div>
             </th:block>
         </div>

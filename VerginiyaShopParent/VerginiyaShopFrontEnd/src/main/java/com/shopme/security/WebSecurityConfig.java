@@ -42,7 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/account_details", "/update_account_details", "/orders/**",
-                        "/cart" , "/address_book/**", "/reviews/**",
+                        "/cart", "/address_book/**", "/reviews/**",
                         "/checkout", "/place_order", "/process_paypal_order",
                         "/write_review/**", "/post_review", "/customer/questions/**",
                         "/post_question/**", "/ask_question/**")
@@ -75,7 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**","/css/**");
+        web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**", "/css/**");
     }
 
     @Bean

@@ -35,7 +35,7 @@
                 </td>
                 <td><span th:class="'textOrderStatus' + ${order.id}">[[${order.status}]]</span></td>
                 <td>
-                    <a class="fas fa-file-alt fa-2x icon-green linkDetail"
+                    <a class="fas fa-file-alt fa-2x icon-green link-detail"
                        th:href="@{'/orders/detail/' + ${order.id}}"
                        title="View details of this order"></a>
 
@@ -64,7 +64,7 @@
                             </div>
                             <div class="col">
                                 <div class="float-right">
-                                    <a class="fas fa-file-alt fa-2x icon-green linkDetail"
+                                    <a class="fas fa-file-alt fa-2x icon-green link-detail"
                                        th:href="@{'/orders/detail/' + ${order.id}}"></a>
 
                                     <th:block
@@ -104,7 +104,7 @@
 
     <div th:replace="orders/return_order_modal :: content"></div>
 
-    <div class="modal fade" id="orderDetailsModal">
+    <div class="modal fade" id="detailModal">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
             </div>
@@ -115,16 +115,17 @@
     <div th:replace="navigation :: footer_menu"></div>
 
 </div>
-<script th:src="@{/js/common_list.js}"></script>
+<script type="text/javascript" th:src="@{/js/common_list.js}"></script>
 <script type="text/javascript">
-	moduleURL = "[[@{/orders}]]";
+    moduleURL = "[[@{/orders}]]";
 	contextPath = "[[@{/}]]";
 	var csrfHeaderName = "[[${_csrf.headerName}]]";
 	var csrfValue = "[[${_csrf.token}]]";
 
 	$(document).ready(function(){
-		handleDetailLink(".linkDetail", "#orderDetailsModal");
+		handleDefaultDetailLinkClick();
 	});
+
 
 </script>
 <script type="text/javascript" th:src="@{/js/return_order.js}"></script>

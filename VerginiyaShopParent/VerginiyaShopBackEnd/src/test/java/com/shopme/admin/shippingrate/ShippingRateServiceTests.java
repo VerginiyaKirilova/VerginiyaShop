@@ -1,24 +1,26 @@
 package com.shopme.admin.shippingrate;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.function.Executable;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
 import com.shopme.admin.repository.ProductRepository;
 import com.shopme.admin.repository.ShippingRateRepository;
 import com.shopme.admin.service.ShippingRateService;
 import com.shopme.common.entity.ShippingRate;
 import com.shopme.common.entity.product.Product;
 import com.shopme.common.exception.ShippingRateNotFoundException;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.function.Executable;
-import org.mockito.InjectMocks;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(MockitoExtension.class)
 @ExtendWith(SpringExtension.class)
@@ -26,6 +28,7 @@ public class ShippingRateServiceTests {
 
     @MockBean
     private ShippingRateRepository shipRepo;
+
     @MockBean
     private ProductRepository productRepo;
 

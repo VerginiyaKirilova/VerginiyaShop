@@ -10,12 +10,12 @@ function loadSalesReportByDateForCategory(period) {
 	if (period == "custom") {
 		startDate = $("#startDate_category").val();
 		endDate = $("#endDate_category").val();
-		
+
 		requestURL = contextPath + "reports/category/" + startDate + "/" + endDate;
 	} else {
-		requestURL = contextPath + "reports/category/" + period;		
+		requestURL = contextPath + "reports/category/" + period;
 	}
-	
+
 	$.get(requestURL, function(responseJSON) {
 		prepareChartDataForSalesReportByCategory(responseJSON);
 		customizeChartForSalesReportByCategory();
@@ -30,11 +30,11 @@ function prepareChartDataForSalesReportByCategory(responseJSON) {
 	data.addColumn('string', 'Category');
 	data.addColumn('number', 'Gross Sales');
 	data.addColumn('number', 'Net Sales');
-	
+
 	totalGrossSales = 0.0;
 	totalNetSales = 0.0;
 	totalItems = 0;
-	
+
 	$.each(responseJSON, function(index, reportItem) {
 		data.addRows([[reportItem.identifier, reportItem.grossSales, reportItem.netSales]]);
 		totalGrossSales += parseFloat(reportItem.grossSales);

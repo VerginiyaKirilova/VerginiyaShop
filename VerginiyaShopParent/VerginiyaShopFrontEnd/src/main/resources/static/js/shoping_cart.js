@@ -77,9 +77,9 @@ function updateTotal() {
 	if (productCount < 1) {
 		showEmptyShoppingCart();
 	} else {
+		formattedTotal = $.number(total, 2);
 		$("#total").text(formatCurrency(total));
 	}
-
 }
 
 function showEmptyShoppingCart() {
@@ -119,7 +119,6 @@ function updateCountNumbers() {
 		element.innerHTML = "" + (index + 1);
 	});
 }
-
 
 function formatCurrency(amount) {
 	return $.number(amount, decimalDigits, decimalSeparator, thousandsSeparator);

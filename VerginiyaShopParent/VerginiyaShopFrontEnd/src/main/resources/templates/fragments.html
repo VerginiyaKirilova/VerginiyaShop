@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head th:fragment="page_head(title, remove)" th:remove="${remove}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
@@ -8,24 +9,19 @@
 
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
     <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
-<body>
 
-<th th:fragment="column_link(fieldName, columnLabel, removeTag)" th:remove="${removeTag}">
-    <a class="text-white"
-       th:href="@{${moduleURL} + '/page/' + ${currentPage} + '?sortField=' + ${fieldName}  +'&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''}}">
-        [[${columnLabel}]]
-    </a>
-    <span th:if="${sortField == fieldName}"
-          th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
-</th>
+<body>
 
 <a th:fragment="page_link(moduleURL, pageNum, label)"
    class="page-link"
-   th:href="@{${moduleURL} + '/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">[[${label}]]</a>
+   th:href="@{${moduleURL} + '/page/' + ${pageNum} + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} + ${keyword != null ? '&keyword=' + keyword : ''}}">
+    [[${label}]]
+</a>
+
 
 <div th:fragment="pagination(moduleURL, entityName)" th:remove="tag">
     <div class="text-center m-1" th:if="${totalItems > 0}">
@@ -81,6 +77,7 @@
     </div>
 </div>
 
+
 <div th:fragment="confirm_modal" class="modal fade text-center" id="confirmModal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -102,15 +99,33 @@
 </div>
 
 <div th:fragment="format_currency(amount)" th:remove="tag">
-    <span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>[[${#numbers.formatDecimal(amount, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE)}]]<span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>
+
+	<span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">
+	      [[${CURRENCY_SYMBOL}]]
+	</span>
+    [[${#numbers.formatDecimal(amount, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE)}]]
+    <span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">
+	      [[${CURRENCY_SYMBOL}]]
+	</span>
+
 </div>
+
+<th th:fragment="column_link(fieldName, columnLabel, removeTag)" th:remove="${removeTag}">
+    <a class="text-white"
+       th:href="@{${moduleURL} + '/page/' + ${currentPage} + '?sortField=' + ${fieldName}  +'&sortDir=' + ${sortField != fieldName ? sortDir : reverseSortDir} + ${keyword != null ? '&keyword=' + keyword : ''} + ${categoryId != null ? '&categoryId=' + categoryId : ''}}">
+        [[${columnLabel}]]
+    </a>
+    <span th:if="${sortField == fieldName}"
+          th:class="${sortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+</th>
 
 <div th:fragment="format_time(dateTime)" th:remove="tag">
     <span th:text="${#dates.format(dateTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
 </div>
 
 <div th:fragment="currency_input(amount)" th:remove="tag">
-    <input type="text" readonly class="form-control" th:value="${(CURRENCY_SYMBOL_POSITION == 'Before price' ? CURRENCY_SYMBOL : '') + #numbers.formatDecimal(amount, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE) + (CURRENCY_SYMBOL_POSITION == 'After price' ? CURRENCY_SYMBOL : '')}">
+    <input type="text" readonly class="form-control"
+           th:value="${(CURRENCY_SYMBOL_POSITION == 'Before price' ? CURRENCY_SYMBOL : '') + #numbers.formatDecimal(amount, 1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE) + (CURRENCY_SYMBOL_POSITION == 'After price' ? CURRENCY_SYMBOL : '')}">
 </div>
 
 <div th:fragment="search_form()" th:remove="tag">
@@ -130,6 +145,7 @@
         </button>
     </form>
 </div>
+
 
 </body>
 </html>

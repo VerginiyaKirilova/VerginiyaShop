@@ -15,13 +15,13 @@ $(document).ready(function() {
 	confirmModalDialog = $("#confirmModal");
 	yesButton = $("#yesButton");
 	noButton = $("#noButton");
-	
+
 	$(".linkUpdateStatus").on("click", function(e) {
 		e.preventDefault();
 		link = $(this);
 		showUpdateConfirmModal(link);
 	});
-	
+
 	addEventHandlerForYesButton();
 });
 
@@ -34,7 +34,7 @@ function addEventHandlerForYesButton() {
 
 function sendRequestToUpdateOrderStatus(button) {
 	requestURL = button.attr("href");
-	
+
 	$.ajax({
 		type: 'POST',
 		url: requestURL,
@@ -44,7 +44,7 @@ function sendRequestToUpdateOrderStatus(button) {
 	}).done(function(response) {
 		showMessageModal("Order updated successfully");
 		updateStatusIconColor(response.orderId, response.status);
-		
+
 		console.log(response);
 	}).fail(function(err) {
 		showMessageModal("Error updating order status");
@@ -59,14 +59,14 @@ function updateStatusIconColor(orderId, status) {
 function showUpdateConfirmModal(link) {
 	noButton.text("NO");
 	yesButton.show();
-		
+
 	orderId = link.attr("orderId");
 	status = link.attr("status");
 	yesButton.attr("href", link.attr("href"));
-	
+
 	confirmText.text("Are you sure you want to update status of the order ID #" + orderId
 					 + " to " + status + "?");
-					 
+
 	confirmModalDialog.modal();
 }
 

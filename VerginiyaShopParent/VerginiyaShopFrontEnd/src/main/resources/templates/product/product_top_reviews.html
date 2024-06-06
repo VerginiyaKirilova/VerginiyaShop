@@ -18,6 +18,7 @@
         </div>
         <div class="col-xs ml-1 mt-3"><span id="ratingNumber">[[${product.averageRating}]]</span> of 5</div>
     </div>
+
     <div class="row m-1 ml-3">
         <a th:href="@{'/ratings/' + ${product.alias}}">View all [[${product.reviewCount}]] ratings</a>
     </div>
@@ -42,6 +43,7 @@
     </div>
 
     <div th:replace="reviews/reviews_votes :: content"></div>
+
 </div>
 </body>
 </html>
