@@ -44,7 +44,7 @@ public class CountryRestController {
 
     @PostMapping("/countries/check_unique")
     @ResponseBody
-    public String checkUnique(@RequestBody Map<String,String> data) {
+    public String checkUnique(@RequestBody Map<String, String> data) {
 
         String name = data.get("name");
 

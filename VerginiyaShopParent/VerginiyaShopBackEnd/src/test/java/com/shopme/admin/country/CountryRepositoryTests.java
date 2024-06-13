@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22,6 +24,19 @@ public class CountryRepositoryTests {
 
     @Autowired
     private CountryRepository repo;
+
+    @BeforeEach
+    public void setup() {
+        // Инициализация на тестови данни
+        repo.save(new Country("USA", "US"));
+        repo.save(new Country("Canada", "CA"));
+        // Други държави, които искате да тествате
+    }
+
+    @AfterEach
+    public void cleanup() {
+        repo.deleteAll(); // Изчиства всички записи от базата данни след всеки тест
+    }
 
     @Test
     public void testCreateCountry() {

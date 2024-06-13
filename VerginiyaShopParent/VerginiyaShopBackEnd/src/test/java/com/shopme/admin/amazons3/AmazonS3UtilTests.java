@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import com.shopme.admin.util.AmazonS3Util;
 
 public class AmazonS3UtilTests {
-
     @Test
     public void testListFolder() {
         String folderName = "test-upload";
@@ -22,7 +21,7 @@ public class AmazonS3UtilTests {
     public void testUploadFile() throws FileNotFoundException {
         String folderName = "test-upload";
         String fileName = "tokyo_2020.PNG";
-        String filePath = "C:\\Users\\Noyan\\Pictures\\" + fileName;
+        String filePath = "C:\\Users\\Vegito\\Pictures\\" + fileName;
 
         InputStream inputStream = new FileInputStream(filePath);
 
