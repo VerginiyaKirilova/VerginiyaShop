@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerginiyaShop - Онлайн магазин</title>
+    <!-- CSS fail -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    <!--  SRI и crossorigin -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-MKeWgu4JYDBIVhCkO8J+vCTSAU2AUsibBEStca/tjXbl+hJXZQIP1cJv0dFXeNnL"
+          crossorigin="anonymous">
+</head>
 <body>
 <div th:fragment="header_menu">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <a class="navbar-brand" th:href="@{/}">
-            <img th:src="@{${S3_BASE_URI + SITE_LOGO}}"/>
+            <img th:src="@{/images/VerginiyashopAdminSmall.png}" alt="Logo"/>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar , #searchNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="topNavbar">
-            <ul class="navbar-nav">
-                <!-- Start of Dynamic Header Menu Items -->
+            <ul class="navbar-nav mr-auto">
+                <!-- Dynamic Header Menu Items -->
                 <th:block th:each="headerMenu : ${headerMenuItems}">
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{'/m/' + ${headerMenu.alias}}">
@@ -20,81 +31,72 @@
                         </a>
                     </li>
                 </th:block>
-                <!-- End of Dynamic Header Menu Items -->
 
+                <!-- Login/Register Links -->
                 <th:block sec:authorize="!isAuthenticated()">
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/login}">Login</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/register}">Register</a>
                     </li>
                 </th:block>
 
+                <!-- Contact Link -->
                 <li class="nav-item">
-                    <a class="nav-link" href="">Contact</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>
-        </div>
 
+            <!-- Search Form -->
+            <form class="form-inline my-2 my-lg-0 ml-auto" th:action="@{/search}" method="get">
+                <input class="form-control mr-sm-2" type="search" name="keyword"
+                       th:value="${searchKeyword}" placeholder="keyword" required/>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <!-- User Actions when authenticated -->
+            <ul class="navbar-nav">
+                <th:block sec:authorize="isAuthenticated()">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/account_details}"
+                           sec:authentication="principal.fullName">Account Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/address_book}">Address Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/customer/questions}">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/reviews}">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/orders}">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fas fa-shopping-cart fa-2x" th:href="@{/cart}"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript: document.logoutForm.submit()">Logout</a>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
     </nav>
 </div>
 
 <div th:fragment="search_nav" class="row">
-
     <th:block sec:authorize="isAuthenticated()">
         <form th:action="@{/logout}" method="post" th:hidden="true" name="logoutForm">
             <input type="submit" value="Logout"/>
         </form>
     </th:block>
 
-
     <div class="col-md">
         <nav class="navbar navbar-expand-sm bg-light">
             <div class="collapse navbar-collapse" id="searchNavbar">
-                <form class="form-inline" th:action="@{/search}" method="get">
-                    <input type="search" name="keyword" class="form-control mr-sm-2"
-                           th:value="${searchKeyword}"
-                           placeholder="keyword" required/>
-                    <input type="submit" value="Search" class="btn btn-outline-success"/>
-                </form>
-
-                <ul class="navbar-nav">
-                    <th:block sec:authorize="isAuthenticated()">
-                        <li class="nav-item">
-                            <b>
-                                <a class="nav-link" th:href="@{/account_details}"
-                                   sec:authentication="principal.fullName"></a>
-                            </b>
-                            <!-- <a class="nav-link" th:href="@{/account_details}" ><b>[[${#request.userPrincipal.principal.fullName}]]</b></a> -->
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/address_book}">Address Book</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/customer/questions}">Questions</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/reviews}">Reviews</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/orders}">Orders</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link fas fa-shopping-cart fa-2x" th:href="@{/cart}"></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript: document.logoutForm.submit()">Logout</a>
-                        </li>
-                    </th:block>
-                </ul>
+                <!-- Other content in search_nav section -->
             </div>
         </nav>
     </div>
@@ -123,5 +125,16 @@
         <p>[[${COPYRIGHT}]]</p>
     </div>
 </div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-EK2P/dR4u8ZfQbXX0jYniOV3l9Y0jYBcHyA5z6IjsMX5ssKL/Vp6BE5Ezso7AEzH"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-b4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+y9/xYCyK5/cVc2O+kgpP1q0kHEgk/tZtB0"
+        crossorigin="anonymous"></script>
 </body>
 </html>
