@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface SettingRepository extends CrudRepository<Setting, String>, JpaRepository <Setting, String>{
+public interface SettingRepository extends CrudRepository<Setting, String>, JpaRepository<Setting, String> {
     public List<Setting> findByCategory(SettingCategory category);
 }

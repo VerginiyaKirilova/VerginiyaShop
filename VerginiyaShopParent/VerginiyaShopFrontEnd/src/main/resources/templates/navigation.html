@@ -2,15 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VerginiyaShop - Онлайн магазин</title>
-    <!-- CSS fail -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
-    <!--  SRI и crossorigin -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-MKeWgu4JYDBIVhCkO8J+vCTSAU2AUsibBEStca/tjXbl+hJXZQIP1cJv0dFXeNnL"
-          crossorigin="anonymous">
+    <!-- Външни ресурси със SRI и crossorigin -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
+<!--          integrity="sha384-MKeWgu4JYDBIVhCkO8J+vCTSAU2AUsibBEStca/tjXbl+hJXZQIP1cJv0dFXeNnL"-->
+<!--          crossorigin="anonymous">-->
 </head>
 <body>
 <div th:fragment="header_menu">
@@ -126,7 +125,7 @@
     </div>
 </div>
 
-<!-- Bootstrap JS and dependencies -->
+<!-- Bootstrap JS и зависимости -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

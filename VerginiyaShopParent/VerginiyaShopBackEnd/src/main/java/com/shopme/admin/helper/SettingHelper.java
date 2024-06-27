@@ -38,7 +38,7 @@ public class SettingHelper {
         }
     }
 
-    public static void saveCurrencySymbol(HttpServletRequest request, GeneralSettingBag settingBag,CurrencyRepository currencyRepo) {
+    public static void saveCurrencySymbol(HttpServletRequest request, GeneralSettingBag settingBag, CurrencyRepository currencyRepo) {
         Integer currencyId = Integer.parseInt(request.getParameter("CURRENCY_ID"));
         Optional<Currency> findByIdResult = currencyRepo.findById(currencyId);
 
@@ -48,7 +48,7 @@ public class SettingHelper {
         }
     }
 
-    public static void updateSettingValuesFromForm(HttpServletRequest request, List<Setting> listSettings,SettingService service) {
+    public static void updateSettingValuesFromForm(HttpServletRequest request, List<Setting> listSettings, SettingService service) {
         for (Setting setting : listSettings) {
             String value = request.getParameter(setting.getKey());
             if (value != null) {

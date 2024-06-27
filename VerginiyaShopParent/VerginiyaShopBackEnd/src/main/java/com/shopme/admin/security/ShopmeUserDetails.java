@@ -90,7 +90,7 @@ public class ShopmeUserDetails implements UserDetails {
 
     @Override
     public String toString() {
-        return "ShopmeUserDetails [user=" + user + "]";
+        return "VerginiyashopUserDetails [user=" + user + "]";
     }
 
     public User getUser() {

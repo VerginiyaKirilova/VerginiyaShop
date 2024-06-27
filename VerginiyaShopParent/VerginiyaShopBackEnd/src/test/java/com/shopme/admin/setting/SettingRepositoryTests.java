@@ -27,7 +27,7 @@ public class SettingRepositoryTests {
     public void testCreateGeneralSettings() {
         Setting siteName = new Setting("SITE_NAME", "Verginiyashop", SettingCategory.GENERAL);
         Setting siteLogo = new Setting("SITE_LOGO", "VerginiyashopAdminSmall.png", SettingCategory.GENERAL);
-        Setting copyright = new Setting("COPYRIGHT", "Copyright (C) 2021 Verginiyashop Ltd.", SettingCategory.GENERAL);
+        Setting copyright = new Setting("COPYRIGHT", "Copyright (C) 2024 Verginiyashop Ltd.", SettingCategory.GENERAL);
 
         repo.saveAll(List.of(siteName, siteLogo, copyright));
 

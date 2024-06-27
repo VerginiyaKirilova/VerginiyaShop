@@ -78,9 +78,9 @@ public class SettingController {
         LOGGER.info("SettingController | saveGeneralSettings | settingBag : " + settingBag.toString());
 
         SettingHelper.saveSiteLogo(multipartFile, settingBag);
-        SettingHelper.saveCurrencySymbol(request, settingBag,currencyRepo);
+        SettingHelper.saveCurrencySymbol(request, settingBag, currencyRepo);
 
-        SettingHelper.updateSettingValuesFromForm(request, settingBag.list(),service);
+        SettingHelper.updateSettingValuesFromForm(request, settingBag.list(), service);
 
         ra.addFlashAttribute("messageSuccess", "General settings have been saved.");
 
@@ -96,7 +96,7 @@ public class SettingController {
 
         LOGGER.info("SettingController | saveMailServerSetttings | mailServerSettings : " + mailServerSettings.toString());
 
-        SettingHelper.updateSettingValuesFromForm(request, mailServerSettings,service);
+        SettingHelper.updateSettingValuesFromForm(request, mailServerSettings, service);
 
         ra.addFlashAttribute("messageSuccess", "Mail server settings have been saved");
 
@@ -112,7 +112,7 @@ public class SettingController {
 
         LOGGER.info("SettingController | saveMailTemplateSetttings | mailTemplateSettings : " + mailTemplateSettings.toString());
 
-        SettingHelper.updateSettingValuesFromForm(request, mailTemplateSettings,service);
+        SettingHelper.updateSettingValuesFromForm(request, mailTemplateSettings, service);
 
         ra.addFlashAttribute("messageSuccess", "Mail template settings have been saved");
 
@@ -128,7 +128,7 @@ public class SettingController {
 
         LOGGER.info("SettingController | savePaymentSetttings | paymentSettings : " + paymentSettings.toString());
 
-        SettingHelper.updateSettingValuesFromForm(request, paymentSettings,service);
+        SettingHelper.updateSettingValuesFromForm(request, paymentSettings, service);
 
         ra.addFlashAttribute("messageSuccess", "Payment settings have been saved");
 
