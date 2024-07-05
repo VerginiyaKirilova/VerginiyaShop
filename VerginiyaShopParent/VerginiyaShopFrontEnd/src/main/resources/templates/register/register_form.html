@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head(${pageTitle}, 'none')"/>
+<head th:replace="fragments :: page_head(${pageTitle}, 'none')"></head>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: header_menu"></div>
@@ -137,8 +137,6 @@
 </div>
 <script type="text/javascript">
 	contextPath = "[[@{/}]]";
-
-
 </script>
 <script th:src="@{/js/common_customer_form.js}"></script>
 <script th:src="@{/js/common_modal.js}"></script>
