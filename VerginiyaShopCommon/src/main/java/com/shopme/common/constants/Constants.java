@@ -2,6 +2,9 @@ package com.shopme.common.constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.context.ApplicationContext;
 
 public class Constants {
 
@@ -10,8 +13,10 @@ public class Constants {
     public static final String S3_BASE_URI;
 
     static {
-        String bucketName = System.getenv("AWS_BUCKET_NAME");
+//        String bucketName = System.getenv("AWS_BUCKET_NAME");
+        String bucketName = "babaqgaawsbucket";
         String region = System.getenv("AWS_REGION");
+
         String pattern = "https://%s.s3.%s.amazonaws.com";
 
         LOGGER.info("VerginiyaShopCommon | Constants | bucketName : " + bucketName);

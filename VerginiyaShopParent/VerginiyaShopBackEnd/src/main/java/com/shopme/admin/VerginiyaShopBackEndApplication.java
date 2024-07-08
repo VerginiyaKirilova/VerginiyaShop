@@ -11,4 +11,5 @@ public class VerginiyaShopBackEndApplication {
     public static void main(String[] args) {
         SpringApplication.run(VerginiyaShopBackEndApplication.class, args);
     }
+
 }

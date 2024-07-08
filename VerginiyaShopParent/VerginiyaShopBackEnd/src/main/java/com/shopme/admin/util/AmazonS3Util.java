@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.DeleteObjectRequest;
 import software.amazon.awssdk.services.s3.model.ListObjectsRequest;
@@ -27,9 +28,12 @@ public class AmazonS3Util {
 
     static {
 
-        BUCKET_NAME = System.getenv("AWS_BUCKET_NAME");
-        ACCESS_KEY_ID = System.getenv("AWS_ACCESS_KEY_ID");
-        SECRET_ACCESS_KEY = System.getenv("AWS_SECRET_ACCESS_KEY");
+//        BUCKET_NAME = System.getenv("AWS_BUCKET_NAME");
+        BUCKET_NAME = "babaqgaawsbucket";
+        ACCESS_KEY_ID = "AKIA2UC3CFRU4ID35YFN";
+        //ACCESS_KEY_ID = System.getenv("AWS_ACCESS_KEY_ID");
+        SECRET_ACCESS_KEY = "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";
+        //SECRET_ACCESS_KEY = System.getenv("AWS_SECRET_ACCESS_KEY");
 
         LOGGER.info("AmazonS3Util | BUCKET_NAME : " + BUCKET_NAME);
     }
@@ -40,7 +44,7 @@ public class AmazonS3Util {
                 ACCESS_KEY_ID,
                 SECRET_ACCESS_KEY);
 
-        S3Client client = S3Client.builder()
+        S3Client client = S3Client.builder().region(Region.EU_NORTH_1)
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
                 .build();
 
