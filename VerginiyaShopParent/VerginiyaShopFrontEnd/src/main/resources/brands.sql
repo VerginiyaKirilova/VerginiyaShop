@@ -1,6 +1,7 @@
 INSERT INTO brands (id, logo, name) VALUES
 (1, '/brand-logos/1/Canon.png','Canon'),
 (2, '/brand-logos/2/Fujifilm.png','Fujifilm'),
+(3, 'default.png','EL'),
 (4, '/brand-logos/4/HP.png','HP'),
 (5, '/brand-logos/5/SanDisk.png','SanDisk'),
 (6, '/brand-logos/6/Western Digital.png','Western Digital'),

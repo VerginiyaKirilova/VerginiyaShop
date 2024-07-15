@@ -3,7 +3,11 @@ package com.shopme.admin.user;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -27,6 +31,10 @@ public class UserRepositoryTests {
     private UserRepository repo;
     private TestEntityManager entityManager;
 
+    private static final String BASE_PASSWORD = "password";
+    private static Integer userId1;
+    private static Integer userId2;
+
     @Autowired
     public UserRepositoryTests(UserRepository repo, TestEntityManager entityManager) {
         super();
@@ -34,30 +42,58 @@ public class UserRepositoryTests {
         this.entityManager = entityManager;
     }
 
+    @BeforeEach
+    public void setup() {
+        // Setup any necessary data before each test
+        userId1 = null;
+        userId2 = null;
+    }
+
+    @AfterEach
+    public void cleanup() {
+        // Cleanup any data created during the tests
+        if (userId1 != null) {
+            repo.deleteById(userId1);
+            userId1 = null;
+        }
+        if (userId2 != null) {
+            repo.deleteById(userId2);
+            userId2 = null;
+        }
+    }
 
     @Test
     public void testCreateNewUserWithOneRole() {
         Role roleAdmin = entityManager.find(Role.class, 1);
-        User userWithOneRole = new User("y@a.net", "ya2020", "Yağmur", "Akşaç");
+
+        // Generate unique email for the test
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+
+        User userWithOneRole = new User(uniqueEmail, BASE_PASSWORD, "Simo", "Sotirov");
         userWithOneRole.addRole(roleAdmin);
 
         User savedUser = repo.save(userWithOneRole);
+        userId1 = savedUser.getId();
 
-        assertThat(savedUser.getId()).isGreaterThan(0);
+        assertThat(userId1).isGreaterThan(0);
     }
 
     @Test
     public void testCreateNewUserWithTwoRoles() {
-        User userWithTwoRole = new User("r@g.com", "rg2020", "Remzi", "Güloğlu");
-        Role roleEditor = new Role(3);
-        Role roleAssistant = new Role(5);
+        Role roleAdmin = entityManager.find(Role.class, 3);
+        Role roleUser = entityManager.find(Role.class, 5);
 
-        userWithTwoRole.addRole(roleEditor);
-        userWithTwoRole.addRole(roleAssistant);
+        // Generate unique email for the test
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
 
-        User savedUser = repo.save(userWithTwoRole);
+        User userWithTwoRoles = new User(uniqueEmail, BASE_PASSWORD, "Daniel", "Kirilov");
+        userWithTwoRoles.addRole(roleAdmin);
+        userWithTwoRoles.addRole(roleUser);
 
-        assertThat(savedUser.getId()).isGreaterThan(0);
+        User savedUser = repo.save(userWithTwoRoles);
+        userId2 = savedUser.getId();
+
+        assertThat(userId2).isGreaterThan(0);
     }
 
     @Test
@@ -68,23 +104,45 @@ public class UserRepositoryTests {
 
     @Test
     public void testGetUserById() {
-        User userById = repo.findById(1).get();
-        System.out.println(userById);
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userId = savedUser.getId();
+
+        User userById = repo.findById(userId).get();
         assertThat(userById).isNotNull();
+
+        repo.deleteById(userId); // Cleanup
     }
 
     @Test
     public void testUpdateUserDetails() {
-        User userUpdateUserDetails = repo.findById(1).get();
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userId = savedUser.getId();
+
+        User userUpdateUserDetails = repo.findById(userId).get();
         userUpdateUserDetails.setEnabled(true);
-        userUpdateUserDetails.setEmail("ya@a.com");
+        userUpdateUserDetails.setEmail("updated_" + uniqueEmail);
 
         repo.save(userUpdateUserDetails);
+
+        User updatedUser = repo.findById(userId).get();
+        assertThat(updatedUser.isEnabled()).isTrue();
+        assertThat(updatedUser.getEmail()).isEqualTo("updated_" + uniqueEmail);
+
+        repo.deleteById(userId); // Cleanup
     }
 
     @Test
     public void testUpdateUserRoles() {
-        User userUpdateUserRoles = repo.findById(2).get();
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userId = savedUser.getId();
+
+        User userUpdateUserRoles = repo.findById(userId).get();
         Role roleEditor = new Role(3);
         Role roleSalesperson = new Role(2);
 
@@ -92,13 +150,26 @@ public class UserRepositoryTests {
         userUpdateUserRoles.addRole(roleSalesperson);
 
         repo.save(userUpdateUserRoles);
+
+        User updatedUser = repo.findById(userId).get();
+        assertThat(updatedUser.getRoles()).contains(roleSalesperson);
+
+        repo.deleteById(userId); // Cleanup
     }
 
     @Test
     public void testDeleteUser() {
-        Integer userDeleteUser = 2;
-        repo.deleteById(userDeleteUser);
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userIdToDelete = savedUser.getId();
 
+        // Delete the test user
+        repo.deleteById(userIdToDelete);
+
+        // Assert that the user is deleted
+        Optional<User> deletedUser = repo.findById(userIdToDelete);
+        assertThat(deletedUser).isNotPresent();
     }
 
     @Test
@@ -111,23 +182,36 @@ public class UserRepositoryTests {
 
     @Test
     public void testCountById() {
-        Integer id = 1;
-        Long countById = repo.countById(id);
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userId = savedUser.getId();
 
+        Long countById = repo.countById(userId);
         assertThat(countById).isNotNull().isGreaterThan(0);
+
+        repo.deleteById(userId); // Cleanup
     }
 
     @Test
     public void testEnableUser() {
         Integer id = 3;
         repo.updateEnabledStatus(id, true);
-
     }
 
     @Test
     public void testDisableUser() {
-        Integer id = 3;
-        repo.updateEnabledStatus(id, false);
+        String uniqueEmail = UUID.randomUUID().toString() + "@test.com";
+        User testUser = new User(uniqueEmail, BASE_PASSWORD, "John", "Doe");
+        User savedUser = repo.save(testUser);
+        Integer userId = savedUser.getId();
+
+        repo.updateEnabledStatus(userId, false);
+
+        User updatedUser = repo.findById(userId).get();
+        assertThat(updatedUser.isEnabled()).isFalse();
+
+        repo.deleteById(userId); // Cleanup
 
     }
 
@@ -140,9 +224,6 @@ public class UserRepositoryTests {
         Page<User> page = repo.findAll(pageable);
 
         List<User> listUsers = page.getContent();
-
-        listUsers.forEach(user -> System.out.println(user));
-
         assertThat(listUsers.size()).isEqualTo(pageSize);
     }
 

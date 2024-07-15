@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,7 +33,7 @@ public class Country extends IdBasedEntity implements Serializable{
     @Column(nullable = false, length = 5)
     private String code;
 
-    //@JsonBackReference
+    @JsonManagedReference
     @OneToMany(mappedBy = "country")
     private Set<State> states;
 

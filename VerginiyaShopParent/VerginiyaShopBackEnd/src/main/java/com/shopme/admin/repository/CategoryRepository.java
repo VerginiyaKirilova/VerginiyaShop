@@ -12,6 +12,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import java.util.List;
 
 public interface CategoryRepository extends PagingAndSortingRepository<Category, Integer>, JpaRepository<Category, Integer> {
+    boolean existsByNameAndParent(String name, Category parent);
 
     @Query("SELECT c FROM Category c WHERE c.parent.id is NULL")
     public List<Category> findRootCategories(Sort sort);

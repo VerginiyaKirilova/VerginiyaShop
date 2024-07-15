@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.Getter;
@@ -29,7 +30,7 @@ public class State extends IdBasedEntity implements Serializable {
     @Column(nullable = false, length = 45)
     private String name;
 
-    //@JsonManagedReference
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "country_id")
     private Country country;
