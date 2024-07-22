@@ -10,9 +10,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ReportRestControllerTests {
@@ -79,8 +84,24 @@ public class ReportRestControllerTests {
     @Test
     @WithMockUser(username = "user1", password = "pass1", authorities = {"Salesperson"})
     public void testGetReportDataByProduct() throws Exception {
+//        String requestURL = "/reports/product/last_7_days";
+//
+//        mockMvc.perform(get(requestURL)).andExpect(status().isOk()).andDo(print());
         String requestURL = "/reports/product/last_7_days";
 
-        mockMvc.perform(get(requestURL)).andExpect(status().isOk()).andDo(print());
+        MvcResult result = mockMvc.perform(get(requestURL))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType("application/json"))
+                .andDo(MockMvcResultHandlers.print())
+                .andReturn();
+
+        String responseBody = result.getResponse().getContentAsString();
+
+
+        assertThat(responseBody).contains("expectedValue");
+
+
+        int expectedLength = 20;
+        assertThat(responseBody.length()).isGreaterThanOrEqualTo(expectedLength);
     }
 }

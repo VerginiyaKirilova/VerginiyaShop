@@ -25,6 +25,7 @@ public class CurrencyRepositoryTests {
 
     @Test
     public void testCreateCurrencies() {
+        repo.deleteAll();
         List<Currency> listCurrencies = Arrays.asList(
                 new Currency("United States Dollar", "$", "USD"),
                 new Currency("British Pound", "£", "GPB"),

@@ -1,17 +1,19 @@
 package com.shopme.admin.order;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.shopme.admin.error.OrderNotFoundException;
+import com.shopme.admin.service.OrderService;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.annotation.Rollback;
 
 import com.shopme.admin.repository.OrderRepository;
@@ -46,7 +49,7 @@ public class OrderRepositoryTests {
     @Test
     public void testCreateNewOrderWithSingleProduct() {
         Customer customer = entityManager.find(Customer.class, 1);
-        Product product = entityManager.find(Product.class, 1);
+        Product product = entityManager.find(Product.class, 5);
 
         Order mainOrder = new Order();
         mainOrder.setOrderTime(new Date());
@@ -82,9 +85,9 @@ public class OrderRepositoryTests {
 
     @Test
     public void testCreateNewOrderWithMultipleProducts() {
-        Customer customer = entityManager.find(Customer.class, 10);
-        Product product1 = entityManager.find(Product.class, 20);
-        Product product2 = entityManager.find(Product.class, 40);
+        Customer customer = entityManager.find(Customer.class, 1);
+        Product product1 = entityManager.find(Product.class, 3);
+        Product product2 = entityManager.find(Product.class, 4);
 
         Order mainOrder = new Order();
         mainOrder.setOrderTime(new Date());
@@ -162,12 +165,30 @@ public class OrderRepositoryTests {
     }
 
     @Test
+    @Rollback
     public void testDeleteOrder() {
-        Integer orderId = 2;
-        repo.deleteById(orderId);
+        Order order = new Order();
+        order.setFirstName("John");
+        order.setLastName("Doe");
+        order.setPhoneNumber("123456789");
+        order.setAddressLine1("123 Main St");
+        order.setCity("Springfield");
+        order.setState("IL");
+        order.setCountry("USA");
+        order.setPostalCode("62704");
+        order = repo.save(order);
 
+
+        repo.deleteById(order.getId());
+
+
+        final Integer orderId = order.getId();
         Optional<Order> result = repo.findById(orderId);
-        assertThat(result).isNotPresent();
+        assertThat(result).isEmpty();
+
+
+        assertThrows(OrderNotFoundException.class, () -> repo.findById(orderId).orElseThrow(() ->
+                new OrderNotFoundException("Could not find any orders with ID " + orderId)));
     }
 
     @Test
@@ -198,7 +219,7 @@ public class OrderRepositoryTests {
 
     @Test
     public void testAddTrackWithStatusNewToOrder() {
-        Integer orderId = 11;
+        Integer orderId = 3;
         Order order = repo.findById(orderId).get();
 
         OrderTrack newTrack = new OrderTrack();
@@ -218,22 +239,38 @@ public class OrderRepositoryTests {
     @Test
     public void testFindByOrderTimeBetween() throws ParseException {
 
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date startTime = dateFormatter.parse("2021-08-01");
-        Date endTime = dateFormatter.parse("2021-08-31");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        Date startTime = dateFormatter.parse("2024-07-16 00:00:00");
+        Date endTime = dateFormatter.parse("2024-07-17 23:59:59");
 
         List<Order> listOrders = repo.findByOrderTimeBetween(startTime, endTime);
+
+        System.out.println("Found orders: " + listOrders.size());
 
         assertThat(listOrders.size()).isGreaterThan(0);
 
         for (Order order : listOrders) {
-            System.out.printf("%s | %s | %.2f | %.2f | %.2f \n",
-                    order.getId(),
-                    order.getOrderTime(),
-                    order.getProductCost(),
-                    order.getSubtotal(),
-                    order.getTotal()
-            );
+
+            if (order.getCustomer() != null) {
+                System.out.printf("%s | %s | %s | %.2f | %.2f | %.2f \n",
+                        order.getId(),
+                        order.getOrderTime(),
+                        order.getCustomer().getFullName(),
+                        order.getProductCost(),
+                        order.getSubtotal(),
+                        order.getTotal()
+                );
+            } else {
+                System.out.printf("%s | %s | %s | %.2f | %.2f | %.2f \n",
+                        order.getId(),
+                        order.getOrderTime(),
+                        "No Customer",
+                        order.getProductCost(),
+                        order.getSubtotal(),
+                        order.getTotal()
+                );
+            }
         }
     }
 }

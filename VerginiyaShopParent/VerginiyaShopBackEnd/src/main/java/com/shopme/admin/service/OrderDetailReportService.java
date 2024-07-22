@@ -19,7 +19,8 @@ public class OrderDetailReportService extends AbstractReportService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderDetailReportService.class);
 
-    @Autowired private OrderDetailRepository repo;
+    @Autowired
+    private OrderDetailRepository repo;
 
     @Override
     protected List<ReportItemDTO> getReportDataByDateRangeInternal(
@@ -35,7 +36,7 @@ public class OrderDetailReportService extends AbstractReportService {
 
         if (reportType.equals(ReportType.CATEGORY)) {
             listOrderDetails = repo.findWithCategoryAndTimeBetween(startDate, endDate);
-        }else if(reportType.equals(ReportType.PRODUCT)) {
+        } else if (reportType.equals(ReportType.PRODUCT)) {
             listOrderDetails = repo.findWithProductAndTimeBetween(startDate, endDate);
         }
 
@@ -50,7 +51,7 @@ public class OrderDetailReportService extends AbstractReportService {
 
             if (reportType.equals(ReportType.CATEGORY)) {
                 identifier = detail.getProduct().getCategory().getName();
-            }else if(reportType.equals(ReportType.PRODUCT)) {
+            } else if (reportType.equals(ReportType.PRODUCT)) {
                 identifier = detail.getProduct().getShortName();
             }
 
@@ -112,11 +113,11 @@ public class OrderDetailReportService extends AbstractReportService {
         LOGGER.info("OrderDetailReportService | printRawData | listOrderDetails size: " + listOrderDetails.size());
 
         for (OrderDetail detail : listOrderDetails) {
-            if(reportType.equals(ReportType.CATEGORY)) {
+            if (reportType.equals(ReportType.CATEGORY)) {
                 System.out.printf("%d, %-20s, %10.2f, %10.2f, %10.2f \n",
                         detail.getQuantity(), detail.getProduct().getCategory().getName(),
                         detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());
-            }else if(reportType.equals(ReportType.PRODUCT)) {
+            } else if (reportType.equals(ReportType.PRODUCT)) {
                 System.out.printf("%d, %-20s, %10.2f, %10.2f, %10.2f \n",
                         detail.getQuantity(), detail.getProduct().getShortName().substring(0, 20),
                         detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());

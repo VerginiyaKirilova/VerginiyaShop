@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Date;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class ProductRepositoryTests {
 
         Product product = new Product();
         product.setName("Acer Aspire Desktop");
-        product.setAlias("acer_aspire_desktop");
+        product.setAlias("acer_aspire_desktop_" + UUID.randomUUID().toString().substring(0, 5));
         product.setShortDescription("Short description for Acer Aspire");
         product.setFullDescription("Full description for Acer Aspire");
 
@@ -51,10 +52,14 @@ public class ProductRepositoryTests {
         product.setCreatedTime(new Date());
         product.setUpdatedTime(new Date());
 
+        product.setMainImage("default.png");
+
         Product savedProduct = repo.save(product);
 
         assertThat(savedProduct).isNotNull();
         assertThat(savedProduct.getId()).isGreaterThan(0);
+
+        repo.delete(savedProduct);
     }
 
     @Test

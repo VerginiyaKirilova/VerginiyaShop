@@ -22,7 +22,7 @@ public class OrderRestControllerTests {
     @Test
     @WithMockUser(username = "user1", password = "pass1", authorities = {"Shipper"})
     public void testUpdateOrderStatus() throws Exception {
-        Integer orderId = 11;
+        Integer orderId = 3;
         String status = "REFUNDED";
         String requestURL = "/orders_shipper/update/" + orderId + "/" + status;
 
