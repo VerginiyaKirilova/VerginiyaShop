@@ -108,8 +108,23 @@ public class OrderDetailReportService extends AbstractReportService {
 
     private void printRawData(List<OrderDetail> listOrderDetails, ReportType reportType) {
 
+//        LOGGER.info("OrderDetailReportService | printRawData is called");
+//
+//        LOGGER.info("OrderDetailReportService | printRawData | listOrderDetails size: " + listOrderDetails.size());
+//
+//        for (OrderDetail detail : listOrderDetails) {
+//            if (reportType.equals(ReportType.CATEGORY)) {
+//                System.out.printf("%d, %-20s, %10.2f, %10.2f, %10.2f \n",
+//                        detail.getQuantity(), detail.getProduct().getCategory().getName(),
+//                        detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());
+//            } else if (reportType.equals(ReportType.PRODUCT)) {
+//                System.out.printf("%d, %-20s, %10.2f, %10.2f, %10.2f \n",
+//                        detail.getQuantity(), detail.getProduct().getShortName().substring(0, 20),
+//                        detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());
+//            }
+//
+//        }
         LOGGER.info("OrderDetailReportService | printRawData is called");
-
         LOGGER.info("OrderDetailReportService | printRawData | listOrderDetails size: " + listOrderDetails.size());
 
         for (OrderDetail detail : listOrderDetails) {
@@ -118,11 +133,12 @@ public class OrderDetailReportService extends AbstractReportService {
                         detail.getQuantity(), detail.getProduct().getCategory().getName(),
                         detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());
             } else if (reportType.equals(ReportType.PRODUCT)) {
+                String productName = detail.getProduct().getShortName();
+                String displayName = productName.length() > 20 ? productName.substring(0, 20) : productName;
                 System.out.printf("%d, %-20s, %10.2f, %10.2f, %10.2f \n",
-                        detail.getQuantity(), detail.getProduct().getShortName().substring(0, 20),
+                        detail.getQuantity(), displayName,
                         detail.getSubtotal(), detail.getProductCost(), detail.getShippingCost());
             }
-
         }
     }
 }

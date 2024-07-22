@@ -1,6 +1,7 @@
 package com.shopme.admin.review;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Date;
 import java.util.List;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.annotation.Rollback;
 
 import com.shopme.admin.repository.ReviewRepository;
@@ -29,7 +31,7 @@ public class ReviewRepositoryTests {
     @Test
     public void testCreateReview() {
 
-        Integer productId = 1;
+        Integer productId = 2;
         Product product = new Product(productId);
 
         Integer customerId = 1;
@@ -59,7 +61,7 @@ public class ReviewRepositoryTests {
 
     @Test
     public void testGetReviewById() {
-        Integer id = 1;
+        Integer id = 39;
         Review review = repo.findById(id).get();
 
         assertThat(review).isNotNull();
@@ -69,7 +71,7 @@ public class ReviewRepositoryTests {
 
     @Test
     public void testUpdateReviewById() {
-        Integer id = 1;
+        Integer id = 39;
         Review review = repo.findById(id).get();
 
         String headline = "An awesome camera at an awesome price";
@@ -86,11 +88,29 @@ public class ReviewRepositoryTests {
 
     @Test
     public void testDeleteReviewById() {
-        Integer id = 1;
+        Integer productId = 1;
+        Product product = new Product(productId);
+
+        Integer customerId = 1;
+        Customer customer = new Customer(customerId);
+
+        Review review = new Review();
+        review.setHeadline("Test headline");
+        review.setComment("Test comment");
+        review.setReviewTime(new Date());
+        review.setRating(5);
+        review.setCustomer(customer);
+        review.setProduct(product);
+
+        Review savedReview = repo.save(review);
+
+        // Now delete the review
+        Integer id = savedReview.getId(); // Get the generated ID
         repo.deleteById(id);
 
         Optional<Review> findById = repo.findById(id);
 
         assertThat(findById).isNotPresent();
     }
+
 }
