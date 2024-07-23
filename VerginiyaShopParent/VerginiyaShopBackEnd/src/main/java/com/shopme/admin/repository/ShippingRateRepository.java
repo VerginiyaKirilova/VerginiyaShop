@@ -8,7 +8,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import java.util.List;
+
 public interface ShippingRateRepository extends SearchRepository<ShippingRate, Integer>, JpaRepository<ShippingRate, Integer> {
+    @Query("SELECT sr FROM ShippingRate sr WHERE sr.country.id = ?1 AND sr.state = ?2")
+    List<ShippingRate> findAllByCountryAndState(Integer countryId, String state);
 
     @Query("SELECT sr FROM ShippingRate sr WHERE sr.country.id = ?1 AND sr.state = ?2")
     public ShippingRate findByCountryAndState(Integer countryId, String state);
