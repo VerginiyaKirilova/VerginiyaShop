@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -26,11 +27,20 @@ public class StateRepositoryTests {
 
     private TestEntityManager entityManager;
 
+    private State testState;
+
     @Autowired
     public StateRepositoryTests(StateRepository repo, TestEntityManager entityManager) {
         super();
         this.repo = repo;
         this.entityManager = entityManager;
+    }
+
+    @BeforeEach
+    void setUp() {
+        testState = new State();
+        testState.setName("TestState");
+        testState = repo.save(testState);
     }
 
     @Test
@@ -74,7 +84,7 @@ public class StateRepositoryTests {
 
     @Test
     public void testUpdateState() {
-        Integer stateId = 3;
+        Integer stateId = 49;
         String stateName = "Tamil Nadu";
         State state = repo.findById(stateId).get();
 
@@ -93,10 +103,10 @@ public class StateRepositoryTests {
 
     @Test
     public void testDeleteState() {
-        Integer stateId = 8;
+        Integer stateId = testState.getId();
         repo.deleteById(stateId);
 
         Optional<State> findById = repo.findById(stateId);
-        assertThat(findById.isEmpty());
+        assertThat(findById.isEmpty()).isTrue();
     }
 }
