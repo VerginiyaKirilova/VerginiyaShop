@@ -13,6 +13,8 @@ import com.shopme.common.entity.Customer;
 public interface AddressRepository extends CrudRepository<Address, Integer>, JpaRepository<Address, Integer> {
     public List<Address> findByCustomer(Customer customer);
 
+    void deleteByCustomerId(Integer customerId);
+
     @Query("SELECT a FROM Address a WHERE a.id = ?1 AND a.customer.id = ?2")
     public Address findByIdAndCustomer(Integer addressId, Integer customerId);
 
