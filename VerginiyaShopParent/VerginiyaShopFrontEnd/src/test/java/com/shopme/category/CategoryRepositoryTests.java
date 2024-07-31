@@ -30,7 +30,7 @@ public class CategoryRepositoryTests {
 
     @Test
     public void testFindCategoryByAlias() {
-        String alias = "electronics";
+        String alias = "Micro";
         Category category = repo.findByAliasEnabled(alias);
 
         assertThat(category).isNotNull();

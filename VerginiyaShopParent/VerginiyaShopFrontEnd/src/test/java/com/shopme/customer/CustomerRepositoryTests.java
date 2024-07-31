@@ -5,6 +5,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.Date;
 import java.util.Optional;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -28,55 +30,59 @@ public class CustomerRepositoryTests {
 
     @Autowired
     private TestEntityManager entityManager;
+    private Customer customer;
 
-
-    @Test
-    public void testCreateCustomer1() {
+    @BeforeEach
+    public void setUp() {
         Integer countryId = 234; // USA
         Country country = entityManager.find(Country.class, countryId);
 
-        Customer customer = new Customer();
+        customer = new Customer();
         customer.setCountry(country);
-        customer.setFirstName("David");
-        customer.setLastName("Fountaine");
+        customer.setFirstName("Deivid");
+        customer.setLastName("Fountaines");
         customer.setPassword("password123");
-        customer.setEmail("david.s.fountaine@gmail.com");
+        customer.setEmail("deivid.s.fountaine@gmail.com");
         customer.setPhoneNumber("312-462-7518");
         customer.setAddressLine1("1927  West Drive");
         customer.setCity("Sacramento");
         customer.setState("California");
         customer.setPostalCode("95867");
+        customer.setVerificationCode("code_12345");
+        customer.setAuthenticationType(AuthenticationType.DATABASE);
         customer.setCreatedTime(new Date());
+        customer.setEnabled(true);
 
-        Customer savedCustomer = repo.save(customer);
+        repo.save(customer);
+    }
 
-        assertThat(savedCustomer).isNotNull();
-        assertThat(savedCustomer.getId()).isGreaterThan(0);
+    @AfterEach
+    public void tearDown() {
+        if (customer != null && customer.getId() != null) {
+            repo.deleteById(customer.getId());
+        }
+    }
+
+    @Test
+    public void testCreateCustomer1() {
+
+        Customer retrievedCustomer = repo.findById(customer.getId()).orElse(null);
+
+
+        assertThat(retrievedCustomer).isNotNull();
+        assertThat(retrievedCustomer.getFirstName()).isEqualTo("Deivid");
+        assertThat(retrievedCustomer.getEmail()).isEqualTo("deivid.s.fountaine@gmail.com");
     }
 
     @Test
     public void testCreateCustomer2() {
-        Integer countryId = 106; // India
-        Country country = entityManager.find(Country.class, countryId);
 
-        Customer customer = new Customer();
-        customer.setCountry(country);
-        customer.setFirstName("Sanya");
-        customer.setLastName("Lad");
-        customer.setPassword("password456");
-        customer.setEmail("sanya.lad2020@gmail.com");
-        customer.setPhoneNumber("02224928052");
-        customer.setAddressLine1("173 , A-, Shah & Nahar Indl.estate, Sunmill Road");
-        customer.setAddressLine2("Dhanraj Mill Compound, Lower Parel (west)");
-        customer.setCity("Mumbai");
-        customer.setState("Maharashtra");
-        customer.setPostalCode("400013");
-        customer.setCreatedTime(new Date());
+        Customer retrievedCustomer = repo.findById(customer.getId()).orElse(null);
 
-        Customer savedCustomer = repo.save(customer);
 
-        assertThat(savedCustomer).isNotNull();
-        assertThat(savedCustomer.getId()).isGreaterThan(0);
+        assertThat(retrievedCustomer).isNotNull();
+        assertThat(retrievedCustomer.getFirstName()).isEqualTo("Deivid");
+        assertThat(retrievedCustomer.getEmail()).isEqualTo("deivid.s.fountaine@gmail.com");
     }
 
     @Test
@@ -89,7 +95,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testUpdateCustomer() {
-        Integer customerId = 1;
+        Integer customerId = customer.getId();
         String lastName = "Stanfield";
 
         Customer customer = repo.findById(customerId).get();
@@ -102,7 +108,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testGetCustomer() {
-        Integer customerId = 2;
+        Integer customerId = 1;
         Optional<Customer> findById = repo.findById(customerId);
 
         assertThat(findById).isPresent();
@@ -113,7 +119,26 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testDeleteCustomer() {
-        Integer customerId = 2;
+        Integer countryId = 120; // India
+        Country country = entityManager.find(Country.class, countryId);
+
+        Customer customer = new Customer();
+        customer.setCountry(country);
+        customer.setFirstName("Sonya");
+        customer.setLastName("Robins");
+        customer.setPassword("password456");
+        customer.setEmail("sonya.lad2020@gmail.com");
+        customer.setPhoneNumber("02224928052");
+        customer.setAddressLine1("173 , A-, Shah & Nahar Indl.estate, Sunmill Road");
+        customer.setAddressLine2("Dhanraj Mill Compound, Lower Parel (west)");
+        customer.setCity("Mumbai");
+        customer.setState("Maharashtra");
+        customer.setPostalCode("400013");
+        customer.setCreatedTime(new Date());
+
+        Customer savedCustomer = repo.save(customer);
+        Integer customerId = customer.getId();
+
         repo.deleteById(customerId);
 
         Optional<Customer> findById = repo.findById(customerId);
@@ -122,7 +147,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testFindByEmail() {
-        String email = "david.s.fountaine@gmail.com";
+        String email = "deivid.s.fountaine@gmail.com";
         Customer customer = repo.findByEmail(email);
 
         assertThat(customer).isNotNull();
@@ -131,7 +156,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testFindByVerificationCode() {
-        String code = "code_123";
+        String code = "code_12345";
         Customer customer = repo.findByVerificationCode(code);
 
         assertThat(customer).isNotNull();
@@ -140,7 +165,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testEnableCustomer() {
-        Integer customerId = 1;
+        Integer customerId = customer.getId();
         repo.enable(customerId);
 
         Customer customer = repo.findById(customerId).get();
@@ -149,7 +174,7 @@ public class CustomerRepositoryTests {
 
     @Test
     public void testUpdateAuthenticationType() {
-        Integer id = 1;
+        Integer id = customer.getId();
         repo.updateAuthenticationType(id, AuthenticationType.DATABASE);
 
         Customer customer = repo.findById(id).get();
