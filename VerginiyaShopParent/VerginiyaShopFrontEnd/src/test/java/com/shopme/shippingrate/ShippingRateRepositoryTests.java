@@ -21,8 +21,8 @@ public class ShippingRateRepositoryTests {
 
     @Test
     public void testFindByCountryAndState() {
-        Country usa = new Country(234);
-        String state = "New York";
+        Country usa = new Country(106);
+        String state = "UpdatedState";
         ShippingRate shippingRate = repo.findByCountryAndState(usa, state);
 
         assertThat(shippingRate).isNotNull();

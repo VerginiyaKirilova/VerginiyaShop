@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.shopme.common.entity.Review;
 import com.shopme.common.entity.product.Product;
+import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
 
@@ -35,4 +37,8 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
 
     @Query("SELECT r.votes FROM Review r WHERE r.id = ?1")
     public Integer getVoteCount(Integer reviewId);
+
+    @Modifying
+    @Query("DELETE FROM Review r WHERE r.customer.id = :customerId AND r.product.id = :productId")
+    void deleteByCustomerAndProduct(@Param("customerId") Integer customerId, @Param("productId") Integer productId);
 }

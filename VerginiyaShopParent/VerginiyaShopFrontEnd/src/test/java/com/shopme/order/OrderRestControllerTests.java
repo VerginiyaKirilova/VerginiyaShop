@@ -32,7 +32,7 @@ public class OrderRestControllerTests {
     }
 
     @Test
-    @WithUserDetails("lehoanganhvn@gmail.com") // To solve Assertion Error : 302
+    @WithUserDetails("deivid.s.fountaine@gmail.com") // To solve Assertion Error : 302
     public void testSendOrderReturnRequestFailed() throws Exception {
 
         Integer orderId = 1111;
@@ -49,10 +49,10 @@ public class OrderRestControllerTests {
     }
 
     @Test
-    @WithUserDetails("lehoanganhvn@gmail.com")
+    @WithUserDetails("deivid.s.fountaine@gmail.com")
     public void testSendOrderReturnRequestSuccessful() throws Exception {
 
-        Integer orderId = 11;
+        Integer orderId = 14;
         String reason = "I bought the wrong items";
         String note = "Please return my money";
 
