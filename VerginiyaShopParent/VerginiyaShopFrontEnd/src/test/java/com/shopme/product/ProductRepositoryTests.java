@@ -20,7 +20,7 @@ public class ProductRepositoryTests {
 
     @Test
     public void testFindByAlias() {
-        String alias = "canon-eos-m50";
+        String alias = "product-1";
         Product product = repo.findByAlias(alias);
 
         assertThat(product).isNotNull();
