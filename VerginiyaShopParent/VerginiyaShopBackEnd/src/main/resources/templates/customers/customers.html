@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('Customers - Verginiyashop Admin', 'none')" />
+<head th:replace="fragments :: page_head('Customers - Verginiyashop Admin', 'none')"></head>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: menu"></div>
@@ -15,31 +14,28 @@
         <a th:href="@{/customers/export/pdf}" style="text-decoration: none;" class="fas fa-file-pdf fa-2x icon-dark mr-2"></a>
     </div>
 
-    <div th:replace="fragments :: search_form_and_message" />
+    <div th:replace="fragments :: search_form_and_message"></div>
 
     <div class="full-details">
         <table class="table table-bordered table-striped table-hover table-responsive-xl">
             <thead class="thead-dark">
             <tr>
-                <th th:replace="fragments :: column_link('id', #{customer.id.title}, 'none')" />
-                <th th:replace="fragments :: column_link('firstName', #{customer.first.name.title}, 'none')" />
-                <th th:replace="fragments :: column_link('lastName', #{customer.last.name.title}, 'none')" />
+                <th th:replace="fragments :: column_link('id', #{customer.id.title}, 'none')"></th>
+                <th th:replace="fragments :: column_link('firstName', #{customer.first.name.title}, 'none')"></th>
+                <th th:replace="fragments :: column_link('lastName', #{customer.last.name.title}, 'none')"></th>
 
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('email', #{customer.email.title}, 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('email', #{customer.email.title}, 'tag')"></th>
 
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('city', #{customer.city.title}, 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('city', #{customer.city.title}, 'tag')"></th>
 
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('state', #{customer.state.title}, 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('state', #{customer.state.title}, 'tag')"></th>
 
-                <th th:replace="fragments :: column_link('country', #{customer.country.title}, 'none')" />
-                <th th:replace="fragments :: column_link('enabled', #{customer.enabled.title}, 'none')" />
-                <th></th>
+
+                <th th:replace="fragments :: column_link('country', #{customer.country.title}, 'none')"></th>
+                <th th:replace="fragments :: column_link('enabled', #{customer.enabled.title}, 'none')"></th>
             </tr>
             </thead>
             <tbody>
@@ -52,7 +48,7 @@
                 <td class="hideable-column">[[${customer.state}]]</td>
                 <td>[[${customer.country.name}]]</td>
                 <td>
-                    <div th:replace="fragments :: status(${customer.enabled}, 'customer', '/customers/' + ${customer.id})" />
+                    <div th:replace="fragments :: status(${customer.enabled}, 'customer', '/customers/' + ${customer.id})"></div>
                 </td>
                 <td>
                     <a class="fas fa-file-alt fa-2x icon-green link-detail"
@@ -60,9 +56,9 @@
                        title="View details of this customer"
                     ></a>
                     &nbsp;
-                    <div th:replace="fragments :: edit('customer', '/customers/edit/' + ${customer.id})" />
+                    <div th:replace="fragments :: edit('customer', '/customers/edit/' + ${customer.id})"></div>
                     &nbsp;
-                    <div th:replace="fragments :: delete('customer', ${customer.id}, '/customers/delete/' + ${customer.id}, true)" />
+                    <div th:replace="fragments :: delete('customer', ${customer.id}, '/customers/delete/' + ${customer.id}, true)"></div>
                 </td>
             </tr>
             </tbody>
@@ -79,16 +75,16 @@
                     <span>[[${customer.country.name}]]</span>
                 </div>
                 <div>
-                    <div th:replace="fragments :: status(${customer.enabled}, 'customer', '/customers/' + ${customer.id})" />
+                    <div th:replace="fragments :: status(${customer.enabled}, 'customer', '/customers/' + ${customer.id})"></div>
                     &nbsp;
                     <a class="fas fa-file-alt fa-2x icon-green link-detail"
                        th:href="@{'/customers/detail/' + ${customer.id}}"
                        title="View details of this customer"
                     ></a>
                     &nbsp;
-                    <div th:replace="fragments :: edit('customer', '/customers/edit/' + ${customer.id})" />
+                    <div th:replace="fragments :: edit('customer', '/customers/edit/' + ${customer.id})"></div>
                     &nbsp;
-                    <div th:replace="fragments :: delete('customer', ${customer.id}, '/customers/delete/' + ${customer.id}, true)" />
+                    <div th:replace="fragments :: delete('customer', ${customer.id}, '/customers/delete/' + ${customer.id}, true)"></div>
                 </div>
             </div>
             <div>&nbsp;</div>
@@ -97,7 +93,7 @@
 
     <div th:replace="fragments :: pagination('customers')"></div>
 
-    <div th:replace="modal_fragments :: confirm_modal" />
+    <div th:replace="modal_fragments :: confirm_modal"></div>
 
     <div class="modal fade" id="detailModal">
         <div class="modal-dialog modal-lg">

@@ -12,6 +12,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.session.web.http.CookieSerializer;
+import org.springframework.session.web.http.DefaultCookieSerializer;
 
 @Configuration
 @EnableWebSecurity
@@ -59,7 +61,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .rememberMe()
                 .key("AbcDefgKLDSLmvop_0123456789")
-                .tokenValiditySeconds(7 * 24 * 60 * 60); // 7 days 24 hours 60 minutes 60 seconds -> 7days
+                .tokenValiditySeconds(14 * 24 * 60 * 60) // 7 days 24 hours 60 minutes 60 seconds -> 7days
+                .rememberMeCookieName("remember-me")
+                .useSecureCookie(true);
+//
         ;
 
 
@@ -85,6 +90,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
+    }
+
+    @Bean
+    public CookieSerializer cookieSerializer() {
+        DefaultCookieSerializer cookieSerializer = new DefaultCookieSerializer();
+        cookieSerializer.setSameSite("None");
+        cookieSerializer.setUseSecureCookie(true);
+        return cookieSerializer;
     }
 
 }

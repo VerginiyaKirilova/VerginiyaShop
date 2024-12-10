@@ -2,9 +2,6 @@ package com.shopme.common.constants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.context.ApplicationContext;
 
 public class Constants {
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head('Brands - Verginiyashop Admin', 'none')"/>
+<head th:replace="fragments :: page_head('Brands - Verginiyashop Admin', 'none')"></head>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: menu"></div>
@@ -19,7 +19,7 @@
 
     </div>
 
-    <div th:replace="fragments :: search_form_and_message"/>
+    <div th:replace="fragments :: search_form_and_message"></div>
 
     <div class="full-details">
         <table class="table table-bordered table-striped table-hover table-responsive-xl">
@@ -27,7 +27,7 @@
             <tr>
                 <th class="hideable-column">[[#{brand.id}]]</th>
                 <th>[[#{brand.logotitle}]]</th>
-                <th th:replace="fragments :: column_link('name', #{brand.name}, 'none')"/>
+                <th th:replace="fragments :: column_link('name', #{brand.name}, 'none')"></th>
                 <th>[[#{brand.categorytitle}]]</th>
                 <th></th>
             </tr>
@@ -46,9 +46,9 @@
                 </td>
 
                 <td>
-                    <div th:replace="fragments :: edit('brand', '/brands/edit/' + ${brand.id})"/>
+                    <div th:replace="fragments :: edit('brand', '/brands/edit/' + ${brand.id})"></div>
                     &nbsp;
-                    <div th:replace="fragments :: delete('brand', ${brand.id}, '/brands/delete/' + ${brand.id}, true)"/>
+                    <div th:replace="fragments :: delete('brand', ${brand.id}, '/brands/delete/' + ${brand.id}, true)"></div>
                 </td>
             </tr>
             </tbody>
@@ -63,9 +63,9 @@
             <div class="col-6">
                 <div><b>[[${brand.name}]]</b></div>
                 <div class="mt-2">
-                    <div th:replace="fragments :: edit('brand', '/brands/edit/' + ${brand.id})"/>
+                    <div th:replace="fragments :: edit('brand', '/brands/edit/' + ${brand.id})"></div>
                     &nbsp;
-                    <div th:replace="fragments :: delete('brand', ${brand.id}, '/brands/delete/' + ${brand.id}, true)"/>
+                    <div th:replace="fragments :: delete('brand', ${brand.id}, '/brands/delete/' + ${brand.id}, true)"></div>
                 </div>
             </div>
             <div>&nbsp;</div>
@@ -74,16 +74,16 @@
 
     <div th:replace="fragments :: pagination(#{brand.paginationtitle})"></div>
 
-    <div th:replace="modal_fragments :: confirm_modal"/>
+    <div th:replace="modal_fragments :: confirm_modal"></div>
 
     <div th:replace="fragments :: footer"></div>
 
 </div>
 <script th:src="@{/js/common_list.js}"></script>
 <script type="text/javascript">
-	moduleURL = "[[@{/brands}]]";
+    moduleURL = "[[@{/brands}]]";
 
-	entityName = "brand";
+    entityName = "brand";
 
 </script>
 </body>
