@@ -64,9 +64,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .tokenValiditySeconds(14 * 24 * 60 * 60) // 7 days 24 hours 60 minutes 60 seconds -> 7days
                 .rememberMeCookieName("remember-me")
                 .useSecureCookie(true);
-//
-        ;
-
 
         http.headers().frameOptions().sameOrigin();
 

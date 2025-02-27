@@ -1,26 +1,14 @@
 package com.shopme.common.entity;
 
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-
 import com.shopme.common.constants.Constants;
-
-import javax.persistence.JoinColumn;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "brands")
@@ -67,5 +55,7 @@ public class Brand extends IdBasedEntity implements Serializable{
         if (this.id == null) return "/images/image-thumbnail.png";
 
         return Constants.S3_BASE_URI + "/brand-logos/" + this.id + "/" + this.logo;
+
     }
+
 }
