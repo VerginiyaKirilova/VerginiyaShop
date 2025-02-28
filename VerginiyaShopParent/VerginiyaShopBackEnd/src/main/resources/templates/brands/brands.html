@@ -36,11 +36,11 @@
             <tr th:each="brand : ${listBrands}">
                 <td class="hideable-column">[[${brand.id}]]</td>
                 <td>
-                    <img src="https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com/[[${brand.logoPath}]]"
-                         style="width: 100px" class="img-fluid" alt="Brand Logo"/>
+                    <img th:src="${brand.logoPath}" style="width: 100px" class="img-fluid" alt="Brand Logo"/>
+
 
                     <!--                    <img src="https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com/1/Canon.png" style="width: 100px"-->
-<!--                         class="img-fluid" alt="Brand Logo"/>-->
+                    <!--                         class="img-fluid" alt="Brand Logo"/>-->
 
                 </td>
                 <td>[[${brand.name}]]</td>
@@ -63,9 +63,7 @@
     <div class="less-details">
         <div th:each="brand : ${listBrands}" class="row m-1">
             <div class="col-6">
-                <img src="https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com/[[${brand.logoPath}]]"
-                     style="width: 100px" class="img-fluid" alt="Brand Logo"/>
-
+                <img th:src="${brand.logoPath}" style="width: 100px" class="img-fluid" alt="Brand Logo"/>
 
                 <!--                <img src="https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com/1/Canon.png" style="width: 100px"-->
 <!--                     class="img-fluid" alt="Brand Logo"/>-->
