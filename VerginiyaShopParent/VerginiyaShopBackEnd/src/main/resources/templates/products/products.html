@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-<head th:replace="fragments :: page_head('Products - Verginiyashop Admin', 'none')" />
+<head th:replace="fragments :: page_head('Products - Verginiyashop Admin', 'none')"></head>
 <body>
 <div class="container-fluid">
     <div th:replace="navigation :: menu"></div>
@@ -17,8 +17,8 @@
 
     <div>
         <form th:action="@{/products/page/1}" class="form-inline m-3" id="searchForm">
-            <input type="hidden" name="sortField" th:value="${sortField}" />
-            <input type="hidden" name="sortDir" th:value="${sortDir}" />
+            <input type="hidden" name="sortField" th:value="${sortField}"/>
+            <input type="hidden" name="sortDir" th:value="${sortDir}"/>
 
             [[#{products.detail.category}]]&nbsp;
             <select class="form-control" name="categoryId" id="dropdownCategory">
@@ -29,13 +29,22 @@
                 </th:block>
             </select>
 
-            &nbsp;[[#{products.form.filter}]]&nbsp;
+            &nbsp;
+        </form>
+        <form th:action="@{/products/page/1}" class="form-inline m-3">[[#{products.form.filter}]]&nbsp;
             <input type="search" name="keyword" th:value="${keyword}" class="form-control" required/>
-            &nbsp;&nbsp;
+            &nbsp;
+        </form>
+        <form th:action="@{/products/page/1}" class="form-inline m-3">&nbsp;
             <button type="submit" class="btn btn-primary">
                 <i class="fas fa-search"></i>
             </button>
-            &nbsp;&nbsp;
+        </form>
+        <form th:action="@{/products/page/1}" class="form-inline m-3">&nbsp;
+        </form>
+        <form th:action="@{/products/page/1}" class="form-inline m-3">
+        </form>
+        <form th:action="@{/products/page/1}" class="form-inline m-3">&nbsp;
             <button type="button" class="btn btn-secondary" onclick="clearFilter()">
                 <i class="fas fa-eraser"></i>
             </button>
@@ -51,16 +60,13 @@
             <thead class="thead-dark">
             <tr>
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('id', 'ID', 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('id', 'ID', 'tag')"></th>
                 <th>[[#{products.form.mainimage}]]</th>
-                <th th:replace="fragments :: column_link('name', 'Product Name', 'none')" />
+                <th th:replace="fragments :: column_link('name', 'Product Name', 'none')"></th>
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('brand', 'Brand', 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('brand', 'Brand', 'tag')"></th>
                 <th class="hideable-column">
-                <th th:replace="fragments :: column_link('category', 'Category', 'tag')" />
-                </th>
+                <th th:replace="fragments :: column_link('category', 'Category', 'tag')"></th>
                 <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                     <th>[[#{products.form.enabled}]]</th>
                 </th:block>
@@ -84,7 +90,7 @@
                 <td class="hideable-column">[[${product.category.name}]]</td>
                 <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                     <td>
-                        <div th:replace="fragments :: status(${product.enabled}, 'product', '/products/' + ${product.id})" />
+                        <div th:replace="fragments :: status(${product.enabled}, 'product', '/products/' + ${product.id})"></div>
                     </td>
                 </th:block>
                 <td>
@@ -94,11 +100,11 @@
                     ></a>
                     &nbsp;
                     <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Salesperson')">
-                        <div th:replace="fragments :: edit('product', '/products/edit/' + ${product.id})" />
+                        <div th:replace="fragments :: edit('product', '/products/edit/' + ${product.id})"></div>
                     </th:block>
                     &nbsp;
                     <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
-                        <div th:replace="fragments :: delete('product', ${product.id}, '/products/delete/' + ${product.id}, true)" />
+                        <div th:replace="fragments :: delete('product', ${product.id}, '/products/delete/' + ${product.id}, true)"></div>
                     </th:block>
                 </td>
             </tr>
@@ -109,7 +115,7 @@
     <div class="less-details">
         <div th:each="product : ${listProducts}" class="row m-1">
             <div class="col-4">
-                <img th:src="@{${product.mainImagePath}}" style="width: 80px" class="img-fluid" />
+                <img th:src="@{${product.mainImagePath}}" style="width: 80px" class="img-fluid"/>
             </div>
             <div class="col-8">
                 <div>
@@ -122,12 +128,12 @@
 
                     <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Salesperson')">
                         &nbsp;
-                        <div th:replace="fragments :: edit('product', '/products/edit/' + ${product.id})" />
+                        <div th:replace="fragments :: edit('product', '/products/edit/' + ${product.id})"></div>
                     </th:block>
 
                     <th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
                         &nbsp;
-                        <div th:replace="fragments :: delete('product', ${product.id}, '/products/delete/' + ${product.id}, true)" />
+                        <div th:replace="fragments :: delete('product', ${product.id}, '/products/delete/' + ${product.id}, true)"></div>
                     </th:block>
                 </div>
             </div>
@@ -136,7 +142,7 @@
     </div>
 
 
-    <div th:replace="modal_fragments :: confirm_modal" />
+    <div th:replace="modal_fragments :: confirm_modal"></div>
 
     <div class="modal fade" id="detailModal">
         <div class="modal-dialog modal-xl">
@@ -153,17 +159,17 @@
 </div>
 <script th:src="@{/js/common_list.js}"></script>
 <script type="text/javascript">
-	moduleURL = "[[@{/products}]]";
-	entityName = "product";
-	$(document).ready(function() {
+    moduleURL = "[[@{/products}]]";
+    entityName = "product";
+    $(document).ready(function() {
 
-		handleDefaultDetailLinkClick();
+        handleDefaultDetailLinkClick();
 
-		$("#dropdownCategory").on("change", function() {
-			$("#searchForm").submit();
-		});
+        $("#dropdownCategory").on("change", function() {
+            $("#searchForm").submit();
+        });
 
-	});
+    });
 </script>
 </body>
 </html>

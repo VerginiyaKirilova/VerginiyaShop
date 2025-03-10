@@ -1,150 +1,1092 @@
-2025-02-28 14:18:13.634  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listFirstPage is started
-2025-02-28 14:18:13.638  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listFirstPage | sortDir : null
-2025-02-28 14:18:13.639  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage is started
-2025-02-28 14:18:13.722  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | listCategories : [Camera, --Cables & Adapters, --Cameras, --CamerasNew, --Cameras_New, --Carrier Cellphones, --Cellphone Accessories, --Cellphone Cases, --Cellphone Stands, --Digital Cameras, --Flashes, --Lenses, --MicroSD Cards, --Smartphones, --SmartphonesNew, --Smartphones_New, --Tripods & Monopods, --Unlocked Cellphones, Default Category, Electronics, Home Appliances]
-2025-02-28 14:18:13.725  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | reverseSortDir : desc
-2025-02-28 14:18:13.725  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | totalPages : 2
-2025-02-28 14:18:13.725  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | totalItems : 7
-2025-02-28 14:18:13.725  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | currentPage : 1
-2025-02-28 14:18:13.727  INFO 35276 --- [http-nio-8080-exec-1] c.s.admin.controller.CategoryController  : CategoryController | listByPage | sortDir : asc
-2025-02-28 14:26:42.127  INFO 13936 --- [restartedMain] c.s.a.VerginiyaShopBackEndApplication    : Starting VerginiyaShopBackEndApplication using Java 19.0.2 on LAPTOP-QKH2B2NM with PID 13936 (C:\Users\Vegito\HW\VerginiyaShop\VerginiyaShopParent\VerginiyaShopBackEnd\target\classes started by Vegito in C:\Users\Vegito\HW\VerginiyaShop\VerginiyaShopParent\VerginiyaShopBackEnd)
-2025-02-28 14:26:42.133  INFO 13936 --- [restartedMain] c.s.a.VerginiyaShopBackEndApplication    : No active profile set, falling back to default profiles: default
-2025-02-28 14:26:42.245  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/xalan/xalan/2.7.2/xercesImpl.jar,file:/C:/Users/Vegito/.m2/repository/xalan/xalan/2.7.2/xml-apis.jar,file:/C:/Users/Vegito/.m2/repository/xalan/xalan/2.7.2/serializer.jar
-2025-02-28 14:26:42.246  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/xalan/serializer/2.7.2/xml-apis.jar
-2025-02-28 14:26:42.247  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-rasterizer-ext\1.13\batik-rasterizer-ext-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-svgrasterizer-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-transcoder-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-i18n-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-codec-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-extension-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/batik-svg-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer-ext/1.13/xml-apis-ext-1.3.04.jar
-2025-02-28 14:26:42.249  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-rasterizer\1.13\batik-rasterizer-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-svgrasterizer-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/xml-apis-ext-1.3.04.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-transcoder-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-svg-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-i18n-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/batik-codec-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-rasterizer/1.13/lib/fop-transcoder-allinone-2.5.jar
-2025-02-28 14:26:42.254  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-slideshow\1.13\batik-slideshow-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-svg-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-i18n-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-slideshow/1.13/lib/xml-apis-ext-1.3.04.jar
-2025-02-28 14:26:42.394  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-squiggle-ext\1.13\batik-squiggle-ext-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-svgbrowser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-swing-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-gui-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-transcoder-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-i18n-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/xml-apis-ext-1.3.04.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-extension-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle-ext/1.13/batik-svg-dom-1.13.jar
-2025-02-28 14:26:42.410  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-squiggle\1.13\batik-squiggle-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-svgbrowser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-svg-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-swing-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-gui-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-transcoder-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-i18n-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-squiggle/1.13/lib/xml-apis-ext-1.3.04.jar
-2025-02-28 14:26:42.412  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-svgpp\1.13\batik-svgpp-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-transcoder-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-anim-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-css-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-ext-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-parser-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-svg-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-bridge-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-script-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-dom-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/xalan-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/serializer-2.7.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/xml-apis-1.4.01.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-gvt-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-xml-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/xml-apis-ext-1.3.04.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-svgpp/1.13/lib/batik-i18n-1.13.jar
-2025-02-28 14:26:42.431  INFO 13936 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\Vegito\.m2\repository\org\apache\xmlgraphics\batik-ttf2svg\1.13\batik-ttf2svg-1.13.jar referenced one or more files that do not exist: file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-shared-resources-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-svggen-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-awt-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/xmlgraphics-commons-2.4.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/commons-io-1.3.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/commons-logging-1.2.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-util-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-constants-1.13.jar,file:/C:/Users/Vegito/.m2/repository/org/apache/xmlgraphics/batik-ttf2svg/1.13/lib/batik-i18n-1.13.jar
-2025-02-28 14:26:42.432  INFO 13936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-02-28 14:26:42.450  INFO 13936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-02-28 14:26:43.819  INFO 13936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-28 14:26:44.092  INFO 13936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 252 ms. Found 18 JPA repository interfaces.
-2025-02-28 14:26:45.505  INFO 13936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-02-28 14:26:45.523  INFO 13936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-28 14:26:45.524  INFO 13936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2025-02-28 14:26:45.796  INFO 13936 --- [restartedMain] o.a.c.c.C.[.[.[/VerginiyaShopAdmin]      : Initializing Spring embedded WebApplicationContext
-2025-02-28 14:26:45.797  INFO 13936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3345 ms
-2025-02-28 14:26:46.110  INFO 13936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-28 14:26:46.217  INFO 13936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2025-02-28 14:26:46.581  INFO 13936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-02-28 14:26:46.787  INFO 13936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-28 14:26:47.271  INFO 13936 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-28 14:26:47.304  INFO 13936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2025-02-28 14:26:49.491  INFO 13936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-02-28 14:26:49.518  INFO 13936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-28 14:26:49.548  WARN 13936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-02-28 14:26:50.322  WARN 13936 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-02-28 14:26:51.341  INFO 13936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/images/**'] with []
-2025-02-28 14:26:51.342  INFO 13936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/js/**'] with []
-2025-02-28 14:26:51.343  INFO 13936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
-2025-02-28 14:26:51.343  INFO 13936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/css/**'] with []
-2025-02-28 14:26:51.399  INFO 13936 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6825ba72, org.springframework.security.web.context.SecurityContextPersistenceFilter@39696452, org.springframework.security.web.header.HeaderWriterFilter@653a667c, org.springframework.security.web.csrf.CsrfFilter@6b562aae, org.springframework.security.web.authentication.logout.LogoutFilter@1823b57, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4d9f5cef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@995cba6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27756334, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5f53d727, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a893551, org.springframework.security.web.session.SessionManagementFilter@24c18d93, org.springframework.security.web.access.ExceptionTranslationFilter@49e3875d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3082264]
-2025-02-28 14:26:51.550  INFO 13936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2025-02-28 14:26:51.686  INFO 13936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2025-02-28 14:26:52.557  INFO 13936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/VerginiyaShopAdmin'
-2025-02-28 14:26:52.570  INFO 13936 --- [restartedMain] c.s.a.VerginiyaShopBackEndApplication    : Started VerginiyaShopBackEndApplication in 11.104 seconds (JVM running for 12.461)
-2025-02-28 14:27:01.847  INFO 13936 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/VerginiyaShopAdmin]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-28 14:27:01.849  INFO 13936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-28 14:27:01.852  INFO 13936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-02-28 14:27:05.174  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listFirstPage is started
-2025-02-28 14:27:05.175  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listFirstPage | sortDir : null
-2025-02-28 14:27:05.176  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage is started
-2025-02-28 14:27:05.305  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | listCategories : [Camera, --Cables & Adapters, --Cameras, --CamerasNew, --Cameras_New, --Carrier Cellphones, --Cellphone Accessories, --Cellphone Cases, --Cellphone Stands, --Digital Cameras, --Flashes, --Lenses, --MicroSD Cards, --Smartphones, --SmartphonesNew, --Smartphones_New, --Tripods & Monopods, --Unlocked Cellphones, Default Category, Electronics, Home Appliances]
-2025-02-28 14:27:05.306  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | reverseSortDir : desc
-2025-02-28 14:27:05.308  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | totalPages : 2
-2025-02-28 14:27:05.311  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | totalItems : 7
-2025-02-28 14:27:05.311  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | currentPage : 1
-2025-02-28 14:27:05.312  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.CategoryController  : CategoryController | listByPage | sortDir : asc
-2025-02-28 14:27:05.511  INFO 13936 --- [http-nio-8080-exec-7] com.shopme.common.constants.Constants    : VerginiyaShopCommon | Constants | bucketName : babaqgaawsbucket
-2025-02-28 14:27:05.511  INFO 13936 --- [http-nio-8080-exec-7] com.shopme.common.constants.Constants    : VerginiyaShopCommon | Constants | region : eu-north-1
-2025-02-28 14:27:05.512  INFO 13936 --- [http-nio-8080-exec-7] com.shopme.common.constants.Constants    : VerginiyaShopCommon | S3_BASE_URI | S3_BASE_URI : https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com
-2025-02-28 14:27:28.440  INFO 13936 --- [http-nio-8080-exec-10] c.s.admin.controller.BrandController     : BrandController | listByPage is started
-2025-02-28 14:27:28.480  INFO 13936 --- [http-nio-8080-exec-2] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
-2025-02-28 14:27:28.481  INFO 13936 --- [http-nio-8080-exec-2] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
-2025-02-28 14:27:28.482  INFO 13936 --- [http-nio-8080-exec-2] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
-2025-02-28 14:27:28.485  INFO 13936 --- [http-nio-8080-exec-2] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
-2025-02-28 14:27:28.485  INFO 13936 --- [http-nio-8080-exec-2] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /brands
-2025-02-28 14:27:28.494  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.controller.BrandController     : BrandController | listByPage is started
-2025-02-28 14:27:28.508  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities is started
-2025-02-28 14:27:28.509  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
-2025-02-28 14:27:28.509  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
-2025-02-28 14:27:28.511  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 0
-2025-02-28 14:27:28.512  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 10
-2025-02-28 14:27:28.586  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | page : Page 1 of 6 containing com.shopme.common.entity.Brand instances
-2025-02-28 14:27:28.587  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | pageNum : 1
-2025-02-28 14:27:28.588  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
-2025-02-28 14:27:28.589  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 1
-2025-02-28 14:27:28.590  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
-2025-02-28 14:27:28.591  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 56
-2025-02-28 14:27:28.592  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
-2025-02-28 14:27:28.593  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 1
-2025-02-28 14:27:28.593  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 6
-2025-02-28 14:27:28.595  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 56
-2025-02-28 14:27:28.657  INFO 13936 --- [http-nio-8080-exec-2] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Brand [id=153, name=Acer, categories=[Laptop computers]], Brand [id=37, name=Acers, categories=[]], Brand [id=28, name=Aioneus, categories=[]], Brand [id=13, name=amazonbasics, categories=[]], Brand [id=43, name=AMD, categories=[]], Brand [id=9, name=Apple, categories=[]], Brand [id=40, name=ASUS, categories=[]], Brand [id=17, name=Bosch, categories=[]], Brand [id=2, name=Brand2, categories=[]], Brand [id=12, name=Caden, categories=[]]]
-2025-02-28 14:27:37.424  INFO 13936 --- [http-nio-8080-exec-6] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
-2025-02-28 14:27:37.425  INFO 13936 --- [http-nio-8080-exec-6] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
-2025-02-28 14:27:37.425  INFO 13936 --- [http-nio-8080-exec-6] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
-2025-02-28 14:27:37.425  INFO 13936 --- [http-nio-8080-exec-6] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
-2025-02-28 14:27:37.427  INFO 13936 --- [http-nio-8080-exec-6] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /brands
-2025-02-28 14:27:37.427  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.controller.BrandController     : BrandController | listByPage is started
-2025-02-28 14:27:37.429  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities is started
-2025-02-28 14:27:37.430  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
-2025-02-28 14:27:37.431  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
-2025-02-28 14:27:37.431  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 1
-2025-02-28 14:27:37.432  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 10
-2025-02-28 14:27:37.446  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | page : Page 2 of 6 containing com.shopme.common.entity.Brand instances
-2025-02-28 14:27:37.447  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | pageNum : 2
-2025-02-28 14:27:37.447  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
-2025-02-28 14:27:37.448  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 11
-2025-02-28 14:27:37.448  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 20
-2025-02-28 14:27:37.449  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 56
-2025-02-28 14:27:37.449  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 20
-2025-02-28 14:27:37.450  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 2
-2025-02-28 14:27:37.450  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 6
-2025-02-28 14:27:37.451  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 56
-2025-02-28 14:27:37.497  INFO 13936 --- [http-nio-8080-exec-6] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Brand [id=1, name=Canon, categories=[]], Brand [id=47, name=Corsair, categories=[]], Brand [id=50, name=Creative, categories=[]], Brand [id=51, name=Crucial, categories=[]], Brand [id=38, name=Dell, categories=[]], Brand [id=42, name=DragonTouch, categories=[]], Brand [id=30, name=Everyworth, categories=[]], Brand [id=33, name=Fitfort, categories=[]], Brand [id=53, name=Gigabyte, categories=[]], Brand [id=21, name=Google, categories=[]]]
-2025-02-28 14:27:41.397  INFO 13936 --- [http-nio-8080-exec-1] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
-2025-02-28 14:27:41.399  INFO 13936 --- [http-nio-8080-exec-1] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
-2025-02-28 14:27:41.399  INFO 13936 --- [http-nio-8080-exec-1] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
-2025-02-28 14:27:41.399  INFO 13936 --- [http-nio-8080-exec-1] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
-2025-02-28 14:27:41.400  INFO 13936 --- [http-nio-8080-exec-1] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /brands
-2025-02-28 14:27:41.401  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.controller.BrandController     : BrandController | listByPage is started
-2025-02-28 14:27:41.403  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities is started
-2025-02-28 14:27:41.404  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
-2025-02-28 14:27:41.404  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
-2025-02-28 14:27:41.405  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 0
-2025-02-28 14:27:41.405  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 10
-2025-02-28 14:27:41.416  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | page : Page 1 of 6 containing com.shopme.common.entity.Brand instances
-2025-02-28 14:27:41.417  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | pageNum : 1
-2025-02-28 14:27:41.419  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
-2025-02-28 14:27:41.419  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 1
-2025-02-28 14:27:41.419  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
-2025-02-28 14:27:41.421  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 56
-2025-02-28 14:27:41.421  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
-2025-02-28 14:27:41.421  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 1
-2025-02-28 14:27:41.421  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 6
-2025-02-28 14:27:41.421  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 56
-2025-02-28 14:27:41.465  INFO 13936 --- [http-nio-8080-exec-1] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Brand [id=153, name=Acer, categories=[Laptop computers]], Brand [id=37, name=Acers, categories=[]], Brand [id=28, name=Aioneus, categories=[]], Brand [id=13, name=amazonbasics, categories=[]], Brand [id=43, name=AMD, categories=[]], Brand [id=9, name=Apple, categories=[]], Brand [id=40, name=ASUS, categories=[]], Brand [id=17, name=Bosch, categories=[]], Brand [id=2, name=Brand2, categories=[]], Brand [id=12, name=Caden, categories=[]]]
-2025-02-28 14:27:54.850  INFO 13936 --- [http-nio-8080-exec-3] c.s.admin.controller.ProductController   : ProductController | listFirstPage is started
-2025-02-28 14:27:54.877  INFO 13936 --- [http-nio-8080-exec-7] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
-2025-02-28 14:27:54.878  INFO 13936 --- [http-nio-8080-exec-7] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
-2025-02-28 14:27:54.878  INFO 13936 --- [http-nio-8080-exec-7] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
-2025-02-28 14:27:54.878  INFO 13936 --- [http-nio-8080-exec-7] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
-2025-02-28 14:27:54.879  INFO 13936 --- [http-nio-8080-exec-7] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /products
-2025-02-28 14:27:54.885  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.controller.ProductController   : ProductController | listByPage is started
-2025-02-28 14:27:54.896  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
-2025-02-28 14:27:54.897  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
-2025-02-28 14:27:54.898  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 0
-2025-02-28 14:27:54.898  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 5
-2025-02-28 14:27:54.952  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
-2025-02-28 14:27:54.952  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 1
-2025-02-28 14:27:54.953  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 5
-2025-02-28 14:27:54.953  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 9
-2025-02-28 14:27:54.953  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 5
-2025-02-28 14:27:54.954  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 1
-2025-02-28 14:27:54.954  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 2
-2025-02-28 14:27:54.954  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 9
-2025-02-28 14:27:54.955  INFO 13936 --- [http-nio-8080-exec-7] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Product [id=1, name=Product 1], Product [id=2, name=Product 2], Product [id=3, name=Product 3], Product [id=4, name=Product 4], Product [id=6, name=Product 5]]
+2025-03-10 17:44:47.221 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css", parameters={}
+2025-03-10 17:44:47.234 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:47.241 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/VerginiyashopAdminBig.png", parameters={}
+2025-03-10 17:44:47.245 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:47.263 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:47.267 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:47.401 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css.map", parameters={}
+2025-03-10 17:44:47.407 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:47.439 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:49.355 DEBUG 29588 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        user0_.id as id1_29_,
+        user0_.email as email2_29_,
+        user0_.enabled as enabled3_29_,
+        user0_.first_name as first_na4_29_,
+        user0_.last_name as last_nam5_29_,
+        user0_.password as password6_29_,
+        user0_.photos as photos7_29_ 
+    from
+        users user0_ 
+    where
+        user0_.email=?
+2025-03-10 17:44:49.401 DEBUG 29588 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        roles0_.user_id as user_id1_30_0_,
+        roles0_.role_id as role_id2_30_0_,
+        role1_.id as id1_20_1_,
+        role1_.description as descript2_20_1_,
+        role1_.name as name3_20_1_ 
+    from
+        users_roles roles0_ 
+    inner join
+        roles role1_ 
+            on roles0_.role_id=role1_.id 
+    where
+        roles0_.user_id=?
+2025-03-10 17:44:49.537 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/brands", parameters={}
+2025-03-10 17:44:49.539 DEBUG 29588 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.shopme.admin.controller.BrandController#listFirstPage()
+2025-03-10 17:44:49.540  INFO 29588 --- [http-nio-8080-exec-5] c.s.admin.controller.BrandController     : BrandController | listByPage is started
+2025-03-10 17:44:49.544 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2025-03-10 17:44:49.545 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-03-10 17:44:49.554 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/brands/page/1?sortField=name&sortDir=asc", parameters={masked}
+2025-03-10 17:44:49.557 DEBUG 29588 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.shopme.admin.controller.BrandController#listByPage(PagingAndSortingHelper, int)
+2025-03-10 17:44:49.568  INFO 29588 --- [http-nio-8080-exec-8] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
+2025-03-10 17:44:49.569  INFO 29588 --- [http-nio-8080-exec-8] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
+2025-03-10 17:44:49.569  INFO 29588 --- [http-nio-8080-exec-8] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
+2025-03-10 17:44:49.569  INFO 29588 --- [http-nio-8080-exec-8] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
+2025-03-10 17:44:49.570  INFO 29588 --- [http-nio-8080-exec-8] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /brands
+2025-03-10 17:44:49.578  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.controller.BrandController     : BrandController | listByPage is started
+2025-03-10 17:44:49.594  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities is started
+2025-03-10 17:44:49.595  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
+2025-03-10 17:44:49.596  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
+2025-03-10 17:44:49.597  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 0
+2025-03-10 17:44:49.597  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 10
+2025-03-10 17:44:49.614 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        brand0_.id as id1_2_,
+        brand0_.logo as logo2_2_,
+        brand0_.name as name3_2_ 
+    from
+        brands brand0_ 
+    order by
+        brand0_.name asc limit ?
+2025-03-10 17:44:49.640 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        count(brand0_.id) as col_0_0_ 
+    from
+        brands brand0_
+2025-03-10 17:44:49.656  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | page : Page 1 of 6 containing com.shopme.common.entity.Brand instances
+2025-03-10 17:44:49.656  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | listEntities | pageNum : 1
+2025-03-10 17:44:49.656  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
+2025-03-10 17:44:49.658  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 1
+2025-03-10 17:44:49.659  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
+2025-03-10 17:44:49.660  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 55
+2025-03-10 17:44:49.661  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 10
+2025-03-10 17:44:49.661  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 1
+2025-03-10 17:44:49.662  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 6
+2025-03-10 17:44:49.662  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 55
+2025-03-10 17:44:49.663 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.676 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.680 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.684 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.687 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.690 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.695 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.698 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.703 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.708 DEBUG 29588 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        categories0_.brand_id as brand_id1_3_0_,
+        categories0_.category_id as category2_3_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_,
+        category2_.id as id1_5_2_,
+        category2_.alias as alias2_5_2_,
+        category2_.all_parent_ids as all_pare3_5_2_,
+        category2_.enabled as enabled4_5_2_,
+        category2_.image as image5_5_2_,
+        category2_.name as name6_5_2_,
+        category2_.parent_id as parent_i7_5_2_ 
+    from
+        brands_categories categories0_ 
+    inner join
+        categories category1_ 
+            on categories0_.category_id=category1_.id 
+    left outer join
+        categories category2_ 
+            on category1_.parent_id=category2_.id 
+    where
+        categories0_.brand_id=?
+2025-03-10 17:44:49.712  INFO 29588 --- [http-nio-8080-exec-8] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Brand [id=153, name=Acer Computers, categories=[Home Appliances]], Brand [id=37, name=Acers, categories=[]], Brand [id=28, name=Aioneus, categories=[]], Brand [id=13, name=amazonbasics, categories=[]], Brand [id=43, name=AMD, categories=[]], Brand [id=9, name=Apple, categories=[]], Brand [id=40, name=ASUS, categories=[]], Brand [id=17, name=Bosch, categories=[]], Brand [id=12, name=Caden, categories=[]], Brand [id=1, name=Canon, categories=[]]]
+2025-03-10 17:44:49.722 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2025-03-10 17:44:49.910  INFO 29588 --- [http-nio-8080-exec-8] com.shopme.common.constants.Constants    : VerginiyaShopCommon | Constants | bucketName : babaqgaawsbucket
+2025-03-10 17:44:49.910  INFO 29588 --- [http-nio-8080-exec-8] com.shopme.common.constants.Constants    : VerginiyaShopCommon | Constants | region : eu-north-1
+2025-03-10 17:44:49.911  INFO 29588 --- [http-nio-8080-exec-8] com.shopme.common.constants.Constants    : VerginiyaShopCommon | S3_BASE_URI | S3_BASE_URI : https://babaqgaawsbucket.s3.eu-north-1.amazonaws.com
+2025-03-10 17:44:50.286 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.424 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css", parameters={}
+2025-03-10 17:44:50.427 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:50.458 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.520 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/jquery/3.4.1/jquery.min.js", parameters={}
+2025-03-10 17:44:50.519 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/fontawesome/all.css", parameters={}
+2025-03-10 17:44:50.516 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/css/styles.css", parameters={}
+2025-03-10 17:44:50.516 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/js/common.js", parameters={}
+2025-03-10 17:44:50.517 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/js/bootstrap.min.js", parameters={}
+2025-03-10 17:44:50.524 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:50.524 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.524 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.525 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:50.527 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.537 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.544 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.549 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.551 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.560 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/VerginiyashopAdminSmall.png", parameters={}
+2025-03-10 17:44:50.563 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/english.png", parameters={}
+2025-03-10 17:44:50.565 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.565 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.566 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.574 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.576 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.606 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/turkish.png", parameters={}
+2025-03-10 17:44:50.623 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.634 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/js/bootstrap.min.js.map", parameters={}
+2025-03-10 17:44:50.635 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.636 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:50.644 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/js/common_list.js", parameters={}
+2025-03-10 17:44:50.646 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.646 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.655 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.667 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css.map", parameters={}
+2025-03-10 17:44:50.670 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:50.691 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:50.716 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webfonts/fa-solid-900.woff2", parameters={}
+2025-03-10 17:44:50.720 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:50.737 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.089 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/products", parameters={}
+2025-03-10 17:44:59.091 DEBUG 29588 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.shopme.admin.controller.ProductController#listFirstPage()
+2025-03-10 17:44:59.094  INFO 29588 --- [http-nio-8080-exec-9] c.s.admin.controller.ProductController   : ProductController | listFirstPage is started
+2025-03-10 17:44:59.097 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2025-03-10 17:44:59.098 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2025-03-10 17:44:59.116 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/products/page/1?sortField=name&sortDir=asc&categoryId=0", parameters={masked}
+2025-03-10 17:44:59.119 DEBUG 29588 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.shopme.admin.controller.ProductController#listByPage(PagingAndSortingHelper, int, Model, Integer)
+2025-03-10 17:44:59.128  INFO 29588 --- [http-nio-8080-exec-3] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortField : name
+2025-03-10 17:44:59.129  INFO 29588 --- [http-nio-8080-exec-3] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | sortDir : asc
+2025-03-10 17:44:59.131  INFO 29588 --- [http-nio-8080-exec-3] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | reverseSortDir : desc
+2025-03-10 17:44:59.133  INFO 29588 --- [http-nio-8080-exec-3] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | keyword : null
+2025-03-10 17:44:59.133  INFO 29588 --- [http-nio-8080-exec-3] c.s.a.p.PagingAndSortingArgumentResolver : PagingAndSortingArgumentResolver | resolveArgument | moduleURL : /products
+2025-03-10 17:44:59.139  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.controller.ProductController   : ProductController | listByPage is started
+2025-03-10 17:44:59.153  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable is started
+2025-03-10 17:44:59.153  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | sort : name: ASC
+2025-03-10 17:44:59.154  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageNum - 1 : 0
+2025-03-10 17:44:59.154  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | createPageable | pageSize : 5
+2025-03-10 17:44:59.160 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_15_,
+        product0_.alias as alias2_15_,
+        product0_.average_rating as average_3_15_,
+        product0_.brand_id as brand_i20_15_,
+        product0_.category_id as categor21_15_,
+        product0_.cost as cost4_15_,
+        product0_.created_time as created_5_15_,
+        product0_.discount_percent as discount6_15_,
+        product0_.enabled as enabled7_15_,
+        product0_.full_description as full_des8_15_,
+        product0_.height as height9_15_,
+        product0_.in_stock as in_stoc10_15_,
+        product0_.length as length11_15_,
+        product0_.main_image as main_im12_15_,
+        product0_.name as name13_15_,
+        product0_.price as price14_15_,
+        product0_.review_count as review_15_15_,
+        product0_.short_description as short_d16_15_,
+        product0_.updated_time as updated17_15_,
+        product0_.weight as weight18_15_,
+        product0_.width as width19_15_ 
+    from
+        products product0_ 
+    order by
+        product0_.name asc limit ?
+2025-03-10 17:44:59.180 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        brand0_.id as id1_2_0_,
+        brand0_.logo as logo2_2_0_,
+        brand0_.name as name3_2_0_ 
+    from
+        brands brand0_ 
+    where
+        brand0_.id=?
+2025-03-10 17:44:59.183 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.194 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        brand0_.id as id1_2_0_,
+        brand0_.logo as logo2_2_0_,
+        brand0_.name as name3_2_0_ 
+    from
+        brands brand0_ 
+    where
+        brand0_.id=?
+2025-03-10 17:44:59.197 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.200 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        brand0_.id as id1_2_0_,
+        brand0_.logo as logo2_2_0_,
+        brand0_.name as name3_2_0_ 
+    from
+        brands brand0_ 
+    where
+        brand0_.id=?
+2025-03-10 17:44:59.204 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.209 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.215 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.221 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_0_,
+        category0_.alias as alias2_5_0_,
+        category0_.all_parent_ids as all_pare3_5_0_,
+        category0_.enabled as enabled4_5_0_,
+        category0_.image as image5_5_0_,
+        category0_.name as name6_5_0_,
+        category0_.parent_id as parent_i7_5_0_,
+        category1_.id as id1_5_1_,
+        category1_.alias as alias2_5_1_,
+        category1_.all_parent_ids as all_pare3_5_1_,
+        category1_.enabled as enabled4_5_1_,
+        category1_.image as image5_5_1_,
+        category1_.name as name6_5_1_,
+        category1_.parent_id as parent_i7_5_1_ 
+    from
+        categories category0_ 
+    left outer join
+        categories category1_ 
+            on category0_.parent_id=category1_.id 
+    where
+        category0_.id=?
+2025-03-10 17:44:59.231 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        count(product0_.id) as col_0_0_ 
+    from
+        products product0_
+2025-03-10 17:44:59.236  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes is started
+2025-03-10 17:44:59.236  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | startCount : 1
+2025-03-10 17:44:59.237  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 5
+2025-03-10 17:44:59.237  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | page.getTotalElements() : 9
+2025-03-10 17:44:59.237  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | endCount : 5
+2025-03-10 17:44:59.237  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | currentPage : 1
+2025-03-10 17:44:59.237  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalPages : 2
+2025-03-10 17:44:59.239  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | totalItems : 9
+2025-03-10 17:44:59.240  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.paging.PagingAndSortingHelper  : PagingAndSortingHelper | updateModelAttributes | listName : [Product [id=1, name=Product 1], Product [id=2, name=Product 2], Product [id=3, name=Product 3], Product [id=4, name=Product 4], Product [id=6, name=Product 5]]
+2025-03-10 17:44:59.258 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_5_,
+        category0_.alias as alias2_5_,
+        category0_.all_parent_ids as all_pare3_5_,
+        category0_.enabled as enabled4_5_,
+        category0_.image as image5_5_,
+        category0_.name as name6_5_,
+        category0_.parent_id as parent_i7_5_ 
+    from
+        categories category0_ 
+    where
+        category0_.parent_id is null 
+    order by
+        category0_.name asc
+2025-03-10 17:44:59.267 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.277 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.280 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.283 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.287 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.291 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.294 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.297 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.301 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.304 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.308 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.311 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.315 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.318 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.321 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.325 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.329 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.332 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.335 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.338 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.342 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.345 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.349 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.351 DEBUG 29588 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        children0_.parent_id as parent_i7_5_0_,
+        children0_.id as id1_5_0_,
+        children0_.id as id1_5_1_,
+        children0_.alias as alias2_5_1_,
+        children0_.all_parent_ids as all_pare3_5_1_,
+        children0_.enabled as enabled4_5_1_,
+        children0_.image as image5_5_1_,
+        children0_.name as name6_5_1_,
+        children0_.parent_id as parent_i7_5_1_ 
+    from
+        categories children0_ 
+    where
+        children0_.parent_id=? 
+    order by
+        children0_.name asc
+2025-03-10 17:44:59.359  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.controller.ProductController   : ProductController | newProduct | categoryId : 0
+2025-03-10 17:44:59.359  INFO 29588 --- [http-nio-8080-exec-3] c.s.admin.controller.ProductController   : ProductController | newProduct | listCategories : [Camera, --Cables & Adapters, --Cameras, --CamerasNew, --Cameras_New, --Carrier Cellphones, --Cellphone Accessories, --Cellphone Cases, --Cellphone Stands, --Digital Cameras, --Flashes, --Lenses, --MicroSD Cards, --Smartphones, --SmartphonesNew, --Smartphones_New, --Tripods & Monopods, --Unlocked Cellphones, Default Category, Electronics, Home Appliances, Internal Hard Drive, Internals Hard Drive, Memory]
+2025-03-10 17:44:59.361 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.7, */*;q=0.8]
+2025-03-10 17:44:59.615 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css", parameters={}
+2025-03-10 17:44:59.618 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:59.621 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/jquery/3.4.1/jquery.min.js", parameters={}
+2025-03-10 17:44:59.623 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/js/bootstrap.min.js", parameters={}
+2025-03-10 17:44:59.621 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/fontawesome/all.css", parameters={}
+2025-03-10 17:44:59.621 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/css/styles.css", parameters={}
+2025-03-10 17:44:59.625 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:59.627 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:59.629 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.629 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.632 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.637 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.634 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/js/common.js", parameters={}
+2025-03-10 17:44:59.655 DEBUG 29588 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.649 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.649 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.657 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.663 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/english.png", parameters={}
+2025-03-10 17:44:59.663 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/VerginiyashopAdminSmall.png", parameters={}
+2025-03-10 17:44:59.666 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.669 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.669 DEBUG 29588 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.677 DEBUG 29588 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.678 DEBUG 29588 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.685 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/css/bootstrap.min.css.map", parameters={}
+2025-03-10 17:44:59.695 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:59.710 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/images/turkish.png", parameters={}
+2025-03-10 17:44:59.712 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.723 DEBUG 29588 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.725 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webjars/bootstrap/4.3.1/js/bootstrap.min.js.map", parameters={}
+2025-03-10 17:44:59.727 DEBUG 29588 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.728 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/webjars/]]
+2025-03-10 17:44:59.740 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/webfonts/fa-solid-900.woff2", parameters={}
+2025-03-10 17:44:59.741 DEBUG 29588 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.743 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.753 DEBUG 29588 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.855 DEBUG 29588 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-03-10 17:44:59.862 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/VerginiyaShopAdmin/js/common_list.js", parameters={}
+2025-03-10 17:44:59.865 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/]]
+2025-03-10 17:44:59.871 DEBUG 29588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

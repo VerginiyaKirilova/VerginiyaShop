@@ -121,7 +121,7 @@ public class CategoryService implements ICategoryService{
 
         List<Category> categoriesUsedInForm = new ArrayList<>();
 
-        Iterable<Category> categoriesInDB = categoryRepository.findAll();
+        Iterable<Category> categoriesInDB = categoryRepository.findRootCategories(Sort.by("name").ascending());
 
         for (Category category : categoriesInDB) {
             categoriesUsedInForm.add(Category.copyIdAndName(category));
